@@ -1,0 +1,127 @@
+@import "../import/variable.scss";
+@import "../import/_mixin.scss";
+@import "../import/_placeholder.scss";
+.sc-deal-time {
+    margin-top: 40px;
+    .title-home {
+        @include title-home;
+    }
+    .prod {
+        @include prod;
+        .relative {
+            height: auto;
+        }
+    }
+    .deal-countdown {
+        display: block;
+        clear: both;
+        @include clear;
+        .time-box {
+            color: #fff;
+            float: left;
+            text-align: center;
+            width: 25%; // background:blue;
+            padding: 0 2px;
+            .num {
+                font-size: 18px;
+                font-family: 'brandon_textbold', sans-serif;
+            	color: #000;
+                background: #fafafa none repeat scroll 0 0;
+                position: relative;
+                line-height: 30px;
+                min-height: 30px;
+                
+                border-radius: 0 0 0 18px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 0;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    background: $c1;
+                }
+                span{
+                	position: relative;
+                	z-index: 2;
+                	background:#fafafa;
+                	display: block;
+                	border-bottom-left-radius: 15px;
+                }
+            }
+            .label {
+            	position: relative;
+            	display: block;
+                border-radius: 0;
+                padding: 0;
+                
+                span{
+                	position: relative;
+                	z-index: 2;
+                	background: $c1;
+                	display: block;
+                	width: 100%;
+                	min-height: 20px;
+                	padding: 5px 10px;
+                	border-top-right-radius: 15px;
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+					top: 0;
+                    right: 0;
+                    height: 20px;
+                    width: 20px;
+                    background: #fafafa;
+                }
+            }
+        }
+    }
+    .slider_deal {
+        &.owl-carousel {
+            &:hover {
+                .owl-nav {
+                    div {
+                        opacity: 1;
+                    }
+                    .owl-prev {
+                        left: 0;
+                    }
+                    .owl-next {
+                        right: 0;
+                    }
+                }
+            }
+            .owl-nav {
+                max-width: 1200px;
+                left: 50%;
+                transform: translateX(-50%);
+                div {
+                    opacity: 0;
+                    transition: all .3s;
+                }
+                [class^="owl-"] {
+                    font-family: serif;
+                    font-size: 50px;
+                    background: #fff;
+                    padding: 0 0px;
+                    width: 30px;
+                    height: 50px;
+                    line-height: 40px; // border-radius: px;
+                    border: 1px solid $c1;
+                    color: $c1;
+
+                    text-shadow: none;
+                }
+                .owl-prev {
+                    left: 20px;
+                }
+                .owl-next {
+                    right: 20px;
+                }
+            }
+        }
+    }
+}

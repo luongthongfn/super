@@ -1,0 +1,145 @@
+header#header
+  section.qts_head_top
+    .menu_mb.butt_mobile.visible-xs.visible-sm.clearfix
+      button.nav-toggle
+        .icon-menu
+          span.line.line-1
+          span.line.line-2
+          span.line.line-3
+      .text-center(style="line-height: 60px")
+        a(href="")
+          img.img_logo_mb(src="img/logo.png" alt="")
+        span.flr
+          .control-box
+            ul.ul-control-box
+              li.top-cart-block
+                a.open-cart-popup(href="/cart" title="Giỏ hàng")
+                  span#cartItemsCount.div-user-control.control-4(style="")
+                  span#count_Cart_mobile.header-cart-count.CartCount 0
+              li#segment_user_do_login.dropdown
+                a.info(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
+                  .div-user-control.control-2
+                ul.dropdown-menu.info-user(aria-labelledby="dLabel")
+                  li.info
+                    a.login(href="/account/login")
+                      i.fa.fa-sign-in(aria-hidden="true")
+                      |                                                 Đăng nhập
+                  li.info
+                    a(href="/account/register")
+                      i.fa.fa-registered(aria-hidden="true")
+                      |                                                 Đăng ký
+    // /menu_mb
+    .clearfix.clb-header.visible-sm.visible-xs
+    .hd-top
+      .container
+        .hd-top-left
+          .part
+            i.fa.fa-map-marker
+            |  Số 288, Dương Đình Hội, P. Tăng Nhơn Phú B,
+            |                             Quận 9 - TP Hồ Chí Minh
+          .part
+            i.fa.fa-envelope
+            |  inspire.itdev@gmail.com
+          .part
+            i.fa.fa-mobile
+            |  01662 465 188
+  section.qts_head_mid
+    .clb5
+    .container
+      .row_pc.dp-flex-pc.ai-center.jc-space-between
+        .dp-flex-pc.ai-center.jc-space-between.p0
+          .col-lg-3.col-md-2.hidden-sm.hidden-xs
+            .center.logo_pc
+              a(href="")
+                img.wa(src="img/logo.png")
+          .col-md-6
+            form.box_search
+              .input-group
+                .input-group-addon
+                  i.fa.fa-search
+                input.form-control.input_search(type="text" placeholder="Search")
+                span.input-group-btn
+                  button.btn.btn-default.butt_search(type="button") Tìm kiếm
+            ul.chir_autocomplete(style="")
+              li.title.dib
+                strong Gợi ý từ khóa: 
+              li
+                span(style="") Thời trang nam, Thời trang nữ, Balo, Túi xách, Mè và bé...
+          .col-lg-3.col-md-4
+            .control-box
+              ul.ul-control-box
+                li.top-hotline
+                  a(href="/apps/kiem-tra-don-hang" title="Hot line")
+                    span.div-user-control.control-4
+                      img(src="img/phone.png")
+                    span.info Tra cứu đơn hàng
+                li.top-cart-block
+                  a.open-cart-popup(href="/cart" title="Giỏ hàng")
+                    span#cartItemsCount.div-user-control.control-4(style="")
+                    span.info Giỏ hàng
+                    span#count_Cart.header-cart-count.CartCount 0
+                li#segment_user_do_login.dropdown
+                  a.info(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="")
+                    .div-user-control.control-2
+                    span  Tài khoản 
+                  ul.dropdown-menu.info-user(aria-labelledby="dLabel")
+                    li.info
+                      a.login(href="/account/login")
+                        i.fa.fa-sign-in(aria-hidden="true")
+                        |  Đăng nhập
+                    li.info
+                      a(href="/account/register")
+                        i.fa.fa-registered(aria-hidden="true")
+                        |                                                     Đăng ký
+        .clearfix.hidden-lg.hidden-md
+  section.qts_head_bot.sc_header_menu.sticky-header.p0
+    .menu_bg.dp-flex-pc.jc-space-between.ai-center
+      .container
+        .row_pc
+          .col-md-12
+            nav.nav.is-fixed(role="navigation")
+              .nav-container
+                ul.nav-menu.menu.clearfix
+                  li.menu-item.active
+                    a.menu-link(href="")  Trang chủ 
+                  li.menu-item.has-dropdown
+                    a.menu-link(href="")
+                      | Bộ sưu tập
+                      span.label_icon.label-hot(style="") hot
+                    ul.nav-dropdown.menu
+                      li.menu-item.has-dropdown
+                        a.menu-link(href="")  link 1
+                        ul.nav-dropdown.menu
+                          li.menu-item
+                            a.menu-link(href="")  link 1
+                          li.menu-item
+                            a.menu-link(href="")  link 1
+                          li.menu-item
+                            a.menu-link(href="")  link 1
+                          li.menu-item
+                            a.menu-link(href="")  link 1
+                      li.menu-item
+                        a.menu-link(href="")  link 1
+                      li.menu-item
+                        a.menu-link(href="")  link 1
+                      li.menu-item
+                        a.menu-link(href="")  link 1
+                  li.menu-item
+                    a.menu-link(href="")  Sản phẩm 
+                  li.menu-item
+                    a.menu-link(href="")
+                      | Tin tức
+                      span.label_icon.label-new(style="") new
+                  li.menu-item
+                    a.menu-link(href="")  Giới thiệu 
+                  li.menu-item
+                    a.menu-link(href="")  Thời trang mới
+                  li.menu-item
+                    a.menu-link(href="")
+                      | Best seller
+                      span.label_icon.label-sale(style="") sale
+                  li.menu-item
+                    a.menu-link(href="")  Liên hệ
+                  li.menu-item
+                    a.menu-link(href="")  Giới thiệu 
+// end-header

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="teal">
+    <title>sp</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/menu-2.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme2.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+  </head>
+  <body>
+    <!-- begin header-->
+    <div class="page-loader">
+      <div class="spin"></div>
+    </div>
+    <script>
+      $(window).on('load', function () {
+        $('.spin').hide();
+        $('.page-loader').css({
+          'opacity': '0',
+          'visibility': 'hidden'
+        });
+      })
+    </script>
+    <header id="header">
+      <section class="qts_head_top">
+        <div class="menu_mb butt_mobile visible-xs visible-sm clearfix">
+          <button class="nav-toggle">
+            <div class="icon-menu"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></div>
+          </button>
+          <div class="text-center" style="line-height: 60px"><a href=""><img class="img_logo_mb" src="img/logo.png" alt=""></a><span class="flr">
+              <div class="control-box">
+                <ul class="ul-control-box">
+                  <li class="top-cart-block"><a class="open-cart-popup" href="/cart" title="Giỏ hàng"><span class="div-user-control control-4" id="cartItemsCount"></span><span class="header-cart-count CartCount" id="count_Cart_mobile">0</span></a></li>
+                  <li class="dropdown" id="segment_user_do_login"><a class="info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <div class="div-user-control control-2"></div></a>
+                    <ul class="dropdown-menu info-user" aria-labelledby="dLabel">
+                      <li class="info"><a class="login" href="/account/login"><i class="fa fa-sign-in" aria-hidden="true"></i>                                                Đăng nhập</a></li>
+                      <li class="info"><a href="/account/register"><i class="fa fa-registered" aria-hidden="true"></i>                                                Đăng ký</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div></span></div>
+        </div>
+        <!-- /menu_mb-->
+        <div class="clearfix clb-header visible-sm visible-xs"></div>
+        <div class="hd-top">
+          <div class="container">
+            <div class="hd-top-left">
+              <div class="part"><i class="fa fa-map-marker"></i> Số 288, Dương Đình Hội, P. Tăng Nhơn Phú B,
+                                            Quận 9 - TP Hồ Chí Minh
+              </div>
+              <div class="part"><i class="fa fa-envelope"></i> inspire.itdev@gmail.com</div>
+              <div class="part"><i class="fa fa-mobile"></i> 01662 465 188</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="qts_head_mid">
+        <div class="clb5"></div>
+        <div class="container">
+          <div class="row_pc dp-flex-pc ai-center jc-space-between">
+            <div class="dp-flex-pc ai-center jc-space-between p0">
+              <div class="col-lg-3 col-md-2 hidden-sm hidden-xs">
+                <div class="center logo_pc"><a href=""><img class="wa" src="img/logo.png"></a></div>
+              </div>
+              <div class="col-md-6">
+                <form class="box_search">
+                  <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                    <input class="form-control input_search" type="text" placeholder="Search"><span class="input-group-btn">
+                      <button class="btn btn-default butt_search" type="button">Tìm kiếm</button></span>
+                  </div>
+                </form>
+                <ul class="chir_autocomplete">
+                  <li class="title dib"><strong>Gợi ý từ khóa: </strong></li>
+                  <li><span>Thời trang nam, Thời trang nữ, Balo, Túi xách, Mè và bé...</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-4">
+                <div class="control-box">
+                  <ul class="ul-control-box">
+                    <li class="top-hotline"><a href="/apps/kiem-tra-don-hang" title="Hot line"><span class="div-user-control control-4"><img src="img/phone.png"></span><span class="info">Tra cứu đơn hàng</span></a></li>
+                    <li class="top-cart-block"><a class="open-cart-popup" href="/cart" title="Giỏ hàng"><span class="div-user-control control-4" id="cartItemsCount"></span><span class="info">Giỏ hàng</span><span class="header-cart-count CartCount" id="count_Cart">0</span></a></li>
+                    <li class="dropdown" id="segment_user_do_login"><a class="info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">
+                        <div class="div-user-control control-2"></div><span> Tài khoản </span></a>
+                      <ul class="dropdown-menu info-user" aria-labelledby="dLabel">
+                        <li class="info"><a class="login" href="/account/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập</a></li>
+                        <li class="info"><a href="/account/register"><i class="fa fa-registered" aria-hidden="true"></i>                                                    Đăng ký</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix hidden-lg hidden-md"></div>
+          </div>
+        </div>
+      </section>
+      <section class="qts_head_bot sc_header_menu sticky-header p0">
+        <div class="menu_bg dp-flex-pc jc-space-between ai-center">
+          <div class="container">
+            <div class="row_pc">
+              <div class="col-md-12">
+                <nav class="nav is-fixed" role="navigation">
+                  <div class="nav-container">
+                    <ul class="nav-menu menu clearfix">
+                      <li class="menu-item active"><a class="menu-link" href=""> Trang chủ </a></li>
+                      <li class="menu-item has-dropdown"><a class="menu-link" href="">Bộ sưu tập<span class="label_icon label-hot">hot</span></a>
+                        <ul class="nav-dropdown menu">
+                          <li class="menu-item has-dropdown"><a class="menu-link" href=""> link 1</a>
+                            <ul class="nav-dropdown menu">
+                              <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                              <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                              <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                              <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                            </ul>
+                          </li>
+                          <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                          <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                          <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item"><a class="menu-link" href=""> Sản phẩm </a></li>
+                      <li class="menu-item"><a class="menu-link" href="">Tin tức<span class="label_icon label-new">new</span></a></li>
+                      <li class="menu-item"><a class="menu-link" href=""> Giới thiệu </a></li>
+                      <li class="menu-item"><a class="menu-link" href=""> Thời trang mới</a></li>
+                      <li class="menu-item"><a class="menu-link" href="">Best seller<span class="label_icon label-sale">sale</span></a></li>
+                      <li class="menu-item"><a class="menu-link" href=""> Liên hệ</a></li>
+                      <li class="menu-item"><a class="menu-link" href=""> Giới thiệu </a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- end-header-->
+    <article class="home-content">
+      <div class="container">
+        <ul class="crumbs list-inline">
+          <li><a href="">Trang chủ</a></li>
+          <li><a href="">Tất cả sản phẩm</a></li>
+        </ul>
+        <section class="sc-detail">
+          <div class="detail">
+            <div class="row_pc">
+              <div class="col-md-6">
+                <div class="slider_detail">
+                  <input id="__VIEWxSTATE" type="hidden">
+                  <script src="js/modernizr.custom.js" type="text/javascript"></script>
+                  <link href="css/glasscase.minf195.css" rel="stylesheet">
+                  <ul class="gc-start" id="girlstop1">
+                    <li><img src="http://via.placeholder.com/1600x900" alt="image1"></li>
+                    <li><img src="http://via.placeholder.com/1601x900" alt="image1"></li>
+                    <li><img src="http://via.placeholder.com/1602x900" alt="image1"></li>
+                    <li><img src="http://via.placeholder.com/1603x900" alt="image1"></li>
+                  </ul>
+                  <script src="js/jquery.glasscase.minf195.js"></script>
+                  <script type="text/javascript">
+                    $(function () {
+                      $("#girlstop1").glassCase({
+                        'widthDisplay': 1600,
+                        'heightDisplay': 900,
+                        'nrThumbsPerRow': 4,
+                        'isSlowZoom': false,
+                        'isSlowLens': true,
+                        'capZType': 'in',
+                        'thumbsPosition': 'bottom',
+                        'isHoverShowThumbs': true,
+                        'colorIcons': '#000',
+                        'colorActiveThumb': '#189ed0',
+                        'mouseEnterDisplayCB': function () {
+                          $('.pInstructions').text('Click to open expanded view');
+                        },
+                        'mouseLeaveDisplayCB': function () {
+                          $('.pInstructions').text('Roll over image to zoom in');
+                        }
+                      });
+                    });
+                  </script>
+                  <div class="clb10"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="product-detail-box">
+                  <h3 class="product-subtitle">Palmers</h3>
+                  <h1 class="product-title">Balo vải bố Dutti 01.Teener xuất khẩu SID29996</h1><span class="sku"><strong>Mã sản phẩm:</strong> Chưa rõ</span>
+                  <div class="row">
+                    <div class="col-sm-5 col-xs-5 left_box">
+                      <div class="price detail-info-entry">
+                        <div class="current">220.000₫</div>
+                      </div>
+                      <div class="quantity-selector detail-info-entry">
+                        <div class="detail-info-entry-title">Số lượng</div>
+                        <div class="entry number-minus"> </div>
+                        <div class="entry number">1</div>
+                        <div class="entry number-plus"> </div>
+                      </div>
+                      <div class="select clearfix">
+                        <input id="one_variant" type="hidden" name="variantId" value="9238319">
+                      </div>
+                      <div class="select-swatch"></div>
+                    </div>
+                    <div class="col-sm-7 col-xs-7 right_box text-left">
+                      <div class="pd_policy">
+                        <h3>Dịch vụ của chúng tôi</h3>
+                        <p class="serv-1">Giao tận nhà trong 1-3 ngày làm việc<br><span>(áp dụng cho đơn hàng > 3 sản phẩm)</span></p>
+                        <p class="serv-2">Cam kết nếu hình không đúng thực tế , bạn nhận ngay coupon mua hàng trị giá 2.000.000đ tại hệ thống siêu thị Big C.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="detail-info-entry pd_action">
+                    <form>
+                      <button class="button btn-outline btn-addCart" href="javascript:void(0)">Thêm vào giỏ</button>
+                      <button class="button btn-outline btn-buyNow" href="javascript:void(0)">Mua ngay</button>
+                      <button class="button btn-outline btn-Soldout hidden" href="javascript:void(0)">Hết hàng</button>
+                    </form>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="pd_saler">
+                    <h3>Dịch vụ & Khuyến mãi</h3>
+                    <p>Nhập mã 2V6WSHFW khi thanh toán, giảm ngay 100.000đ.</p>
+                    <p>Tặng mã coupon giảm 300.000đ khi đơn hàng trên 5 triệu đồng.</p>
+                    <p>Giao hàng miễn phí đối với đơn hàng trên 5 triệu trong nội thành Tp. Hồ Chí Minh</p>
+                    <p>Giảm ngay 20% đối với những sản phẩm thuộc nhóm Ghế sofa</p>
+                  </div>
+                  <div class="product_socaial">
+                    <div class="box_social">
+                      <div class="fb">
+                        <div class="fb-like" data-href="" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                      </div>
+                      <div class="gg">
+                        <div class="g-plus" data-action="share" data-annotation="none" data-href=""></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  $(document).on('click', '.quantity-selector .entry', function () {
+                    var _qty = parseInt($('.quantity-selector .entry.number').text());
+                    if ($(this).hasClass('number-minus')) {
+                      if (_qty > 1) {
+                        $('.quantity-selector .entry.number').html(--_qty);
+                      }
+                    } else {
+                      $('.quantity-selector .entry.number').html(++_qty);
+                    }
+                  })
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="prod-infomation">
+            <div role="tabpanel">
+              <!-- Nav tabs-->
+              <ul class="detail-tabs" role="tablist">
+                <li class="active" role="presentation"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Chi tiết sản phẩm</a></li>
+                <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">thông số</a></li>
+              </ul>
+              <!-- Tab panes-->
+              <div class="tab-content detail-tab-content">
+                <div class="tab-pane fade in active" id="tab1" role="tabpanel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda obcaecati, minima illum, minus cupiditate temporibus distinctio accusantium sed vero quia. Odit nam ipsa tempore rem maiores deserunt, dolorem rerum.</div>
+                <div class="tab-pane fade" id="tab2" role="tabpanel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem fuga illo officia veritatis reprehenderit aliquam. Molestias quas vel porro eveniet aspernatur, nam ducimus doloribus, nisi eum ad saepe ipsa vitae?</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+    <footer id="footer">
+      <section class="qts_footer_top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-6 item_policy">
+              <div class="ft-policy clearfix"><span class="name-icon pull-left fa fa-truck"></span>
+                <div class="description pull-left">
+                  <h4>MIỄN PHÍ VẬN CHUYỂN</h4>
+                  <p>Cho đơn hàng trên 500k</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 item_policy">
+              <div class="ft-policy clearfix"><span class="name-icon pull-left fa fa-money"></span>
+                <div class="description pull-left">
+                  <h4>CAM KẾT CHÍNH HÃNG</h4>
+                  <p>Đảm bảo chất lượng 100%</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 item_policy">
+              <div class="ft-policy clearfix"><span class="name-icon pull-left fa fa-smile-o"></span>
+                <div class="description pull-left">
+                  <h4>HỖ TRỢ TƯ VẤN</h4>
+                  <p>Thứ 2-Thứ 7 : 08g30 - 17g30</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 item_policy">
+              <div class="ft-policy clearfix"><span class="name-icon pull-left fa fa-phone"></span>
+                <div class="description pull-left">
+                  <h4>01662 465 188</h4>
+                  <p>Đặt hàng ngay</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="qts_footer_mid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12 footer-left">
+              <div class="fi-about-block grid__item footer-new">
+                <div class="fi-title1 insScroll"><a href=""><img class="insImageload wa" src="img/logo_ft.png" alt="" itemprop="logo"></a></div>
+                <div class="fi-content" style="text-align:justify;">
+                  Super Store là chuyên cung cấp các sản phẩm chính hãng với đầy đủ các loại sản phẩm từ
+                  thời trang cho đến đồ dùng gia đình, đồ dùng cá nhân, mẹ và bé, nội thất... Với các
+                  thương hiệu nổi tiếng được nhập khẩu từ nhiều nước trên thế giới.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-12 footer-right">
+              <div class="col-md-3 col-sm-6 col-xs-6 newfooter">
+                <div class="fi-title">Về chúng tôi</div>
+                <div class="fi-content">
+                  <ul class="grid__item one-whole">
+                    <li><a href="/"><span>Trang chủ</span></a></li>
+                    <li><a href="/san-pham-noi-bat"><span>Bộ sưu tập</span></a></li>
+                    <li><a href="/collections/all"><span>Sản phẩm</span></a></li>
+                    <li><a href="/tin-tuc"><span>Tin tức</span></a></li>
+                    <li><a href="/gioi-thieu"><span>Giới thiệu</span></a></li>
+                    <li><a href="/thoi-trang-ban-chay"><span>Thời trang mới</span></a></li>
+                    <li><a href="/deal-time"><span>Best Seller</span></a></li>
+                    <li><a href="/lien-he-voi-chung-toi"><span>Liên hệ</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-6 newfooter">
+                <div class="fi-title">Hướng dẫn</div>
+                <div class="fi-content">
+                  <ul class="grid__item one-whole">
+                    <li><a href="/"><span>Trang chủ</span></a></li>
+                    <li><a href="/san-pham-noi-bat"><span>Bộ sưu tập</span></a></li>
+                    <li><a href="/collections/all"><span>Sản phẩm</span></a></li>
+                    <li><a href="/tin-tuc"><span>Tin tức</span></a></li>
+                    <li><a href="/gioi-thieu"><span>Giới thiệu</span></a></li>
+                    <li><a href="/thoi-trang-ban-chay"><span>Thời trang mới</span></a></li>
+                    <li><a href="/deal-time"><span>Best Seller</span></a></li>
+                    <li><a href="/lien-he-voi-chung-toi"><span>Liên hệ</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-6 newfooter">
+                <div class="fi-title">Thông tin</div>
+                <div class="fi-content">
+                  <ul class="grid__item one-whole">
+                    <li><a href="/"><span>Trang chủ</span></a></li>
+                    <li><a href="/san-pham-noi-bat"><span>Bộ sưu tập</span></a></li>
+                    <li><a href="/collections/all"><span>Sản phẩm</span></a></li>
+                    <li><a href="/tin-tuc"><span>Tin tức</span></a></li>
+                    <li><a href="/gioi-thieu"><span>Giới thiệu</span></a></li>
+                    <li><a href="/thoi-trang-ban-chay"><span>Thời trang mới</span></a></li>
+                    <li><a href="/deal-time"><span>Best Seller</span></a></li>
+                    <li><a href="/lien-he-voi-chung-toi"><span>Liên hệ</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-6 newfooter">
+                <div class="fi-title">Chính sách</div>
+                <div class="fi-content">
+                  <ul class="grid__item one-whole">
+                    <li><a href="/"><span>Trang chủ</span></a></li>
+                    <li><a href="/san-pham-noi-bat"><span>Bộ sưu tập</span></a></li>
+                    <li><a href="/collections/all"><span>Sản phẩm</span></a></li>
+                    <li><a href="/tin-tuc"><span>Tin tức</span></a></li>
+                    <li><a href="/gioi-thieu"><span>Giới thiệu</span></a></li>
+                    <li><a href="/thoi-trang-ban-chay"><span>Thời trang mới</span></a></li>
+                    <li><a href="/deal-time"><span>Best Seller</span></a></li>
+                    <li><a href="/lien-he-voi-chung-toi"><span>Liên hệ</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="qts_footer_bot">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-sm-12 col-xs-12">
+              <div class="bot-ft clearfix insScroll">
+                <div class="col-md-4 logo-ft-1 hidden-xs hidden-sm"><a href="/" title="Bộ công thương"><img class="insImageload wa" data-load="true" src="img/dtb.png"></a></div>
+                <div class="col-md-8 copy">
+                  <p>Công ty TMDV Super store<br> Template bán hàng đẹp, nhiều tính năng, khả năng Responsive thân thiện với
+                                                        người dùng. Tương thích với mọi thiết bị di động.<br> Địa chỉ: Số 288, Dương Đình Hội, P. Tăng Nhơn Phú B, Quận 9 - TP Hồ Chí Minh<br> ĐT:<a href="tel:01662465188">01662 465 188</a><br> Email:<a href="mailto:inspire.itdev@gmail.com">inspire.itdev@gmail.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 hidden-xs hidden-sm ft_payment">
+              <div class="fi-title">Thanh toán</div>
+              <div class="fi-content insScroll"><img class="insImageload wa" data-load="true" src="img/payment.png" alt="Các phương thức thanh toán"></div>
+            </div>
+            <p class="col-sm-12 col-xs-12 cpr text-center">© Bản quyền thuộc về Inspired theme | Cung cấp bởi<a rel="nofollow" href="https://www.bizweb.vn/?utm_source=site-khach-hang&amp;utm_campaign=referral_bizweb&amp;utm_medium=footer&amp;utm_content=cung-cap-boi-bizweb" title="Bizweb" target="_blank">Bizweb</a>.</p>
+          </div>
+        </div>
+      </section>
+    </footer><a class="center" id="go_top" href="#top"><i class="fa fa-angle-up fa-lg"></i></a><a class="center" id="fixed-cart" href="#"><img src="img/icon_cart_mb.png"></a>
+    <!-- <a href="" class="chat-online"><img src="img/chat-online.png"></a>-->
+    <!-- ****************************************script ***********************************************-->
+    <!-- ****************************************script ***********************************************-->
+    <script type="text/javascript">
+      $(function () {
+        // fixed-hl
+        $('.fx-hl').click(function () {
+          // $(this).toggleClass('plus');
+          $('.fixed-hl').toggleClass('mini');
+        })
+      });
+      $("a[href='#top'] , .to-top, #go_top ").click(function () {
+        $("html, body").animate({
+          scrollTop: 0
+        }, "slow");
+        return false;
+      });
+      $(window).scroll(function () {
+        if ($(window).scrollTop() >= 200) {
+          $('#go_top').show();
+        } else {
+          $('#go_top').hide();
+        }
+      });
+    </script>
+    <script src="js/owl.carousel2.min.js"></script>
+  </body>
+</html>

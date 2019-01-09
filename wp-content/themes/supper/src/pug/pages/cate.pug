@@ -1,0 +1,260 @@
+extend ../layouts/_index.pug
+
+block content
+  article.home-content
+    .container
+      ul.crumbs.list-inline
+        li
+          a(href="") Trang chủ
+        li
+          a(href="") Tất cả sản phẩm
+      .row_pc
+        aside.col-md-3.col-sm-4
+          .aside
+            section.sc-danhmuc-cate
+              h2.tit-aside danh mục sản phẩm
+              .sc-txt
+                ul.list-cate
+                  li
+                    a(href="") Tất cả sản phẩm
+                  li
+                    a(href="") Thể thao
+                  li
+                    a(href="") Mỹ phẩm
+                  li
+                    a(href="") Thời trang
+                  li
+                    a(href="") Điện thoại & Ipad
+                  li
+                    a(href="") Mẹ và bé
+                  li
+                    a(href="") Phụ kiện công nghệ
+                  li
+                    a(href="") Laptop
+                  li
+                    a(href="") Trang sức
+                  li
+                    a(href="") Máy ảnh
+            section.sc-spnb
+              h2.tit-aside Sản phẩm nổi bật
+              .sc-txt
+                .prod-aside
+                  .relative
+                    a.reRenderImg.relative(href="")
+                      img(src="img/prod1.jpg")
+                    .dp-mid-center
+                      a.quick_views(href="")
+                        img(src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh")
+                      a.view_product(href="")
+                        img(src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết")
+                      a.add-cart(href="")
+                        img(src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ")
+                    .dp-top-right
+                      | Giảm 92%
+                  .txt
+                    h3
+                      a(href="") Balo nam nữ style dể thương SID49706
+                    .price
+                      span.current 25.500₫
+                      span.older 30.000₫
+                .prod-aside
+                  .relative
+                    a.reRenderImg.relative(href="")
+                      img(src="img/prod1.jpg")
+                    .dp-mid-center
+                      a.quick_views(href="")
+                        img(src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh")
+                      a.view_product(href="")
+                        img(src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết")
+                      a.add-cart(href="")
+                        img(src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ")
+                    .dp-top-right
+                      | Giảm 92%
+                  .txt
+                    h3
+                      a(href="") Balo nam nữ style dể thương SID49706
+                    .price
+                      span.current 25.500₫
+                      span.older 30.000₫
+        main.col-md-9.col-sm-8
+          // begin sanpham-cate
+          section.sc-sanpham-cate
+            h2.title-cate
+              a(href="") Tất cả sản phẩm
+              form.flr.filter-view
+                label(for="") Sắp xếp:
+                select
+                  option Thứ tự
+                  option Mặc định
+                  option Bán chạy nhất
+                  option A → Z
+                  option Z → A
+                  option Giá tăng dần
+                  option Giá giảm dần
+                  option Hàng mới nhất
+                  option Hàng cũ nhất
+                button.view-list(title="view list")
+                button.view-grid.active(title="view grid")
+            .row
+              .col-md-4.col-sm-6.col-xs-6.clear-md-4.clear-xs-6
+                .cate-prod
+                  .relative
+                    a.reRenderImg.relative(href="")
+                      img(src="img/prod1.jpg")
+                    .dp-mid-center
+                      a.quick_views(href="")
+                        img(src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh")
+                      a.view_product(href="")
+                        img(src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết")
+                      a.add-cart(href="")
+                        img(src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ")
+                    .dp-top-right
+                      | Giảm 92%
+                  .txt
+                    h3
+                      a(href="") Balo nam nữ style dể thương SID49706
+                    .price
+                      span.current 25.500₫
+                      span.older 30.000₫
+              .col-md-4.col-sm-6.col-xs-6.clear-md-4.clear-xs-6
+                .cate-prod
+                  .relative
+                    a.reRenderImg.relative(href="")
+                      img(src="img/prod1.jpg")
+                    .dp-mid-center
+                      a.quick_views(href="")
+                        img(src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh")
+                      a.view_product(href="")
+                        img(src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết")
+                      a.add-cart(href="")
+                        img(src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ")
+                    .dp-top-right
+                      | Giảm 92%
+                  .txt
+                    h3
+                      a(href="") Balo nam nữ style dể thương SID49706
+                    .price
+                      span.current 25.500₫
+                      span.older 30.000₫
+              .col-md-4.col-sm-6.col-xs-6.clear-md-4.clear-xs-6
+                .cate-prod
+                  .relative
+                    a.reRenderImg.relative(href="")
+                      img(src="img/prod1.jpg")
+                    .dp-mid-center
+                      a.quick_views(href="")
+                        img(src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh")
+                      a.view_product(href="")
+                        img(src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết")
+                      a.add-cart(href="")
+                        img(src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ")
+                    .dp-top-right
+                      | Giảm 92%
+                  .txt
+                    h3
+                      a(href="") Balo nam nữ style dể thương SID49706
+                    .price
+                      span.current 25.500₫
+                      span.older 30.000₫
+              .col-md-4.col-sm-6.col-xs-6.clear-md-4.clear-xs-6
+                .cate-prod
+                  .relative
+                    a.reRenderImg.relative(href="")
+                      img(src="img/prod1.jpg")
+                    .dp-mid-center
+                      a.quick_views(href="")
+                        img(src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh")
+                      a.view_product(href="")
+                        img(src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết")
+                      a.add-cart(href="")
+                        img(src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ")
+                    .dp-top-right
+                      | Giảm 92%
+                  .txt
+                    h3
+                      a(href="") Balo nam nữ style dể thương SID49706
+                    .price
+                      span.current 25.500₫
+                      span.older 30.000₫
+              .col-md-4.col-sm-6.col-xs-6.clear-md-4.clear-xs-6
+                .cate-prod
+                  .relative
+                    a.reRenderImg.relative(href="")
+                      img(src="img/prod1.jpg")
+                    .dp-mid-center
+                      a.quick_views(href="")
+                        img(src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh")
+                      a.view_product(href="")
+                        img(src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết")
+                      a.add-cart(href="")
+                        img(src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ")
+                    .dp-top-right
+                      | Giảm 92%
+                  .txt
+                    h3
+                      a(href="") Balo nam nữ style dể thương SID49706
+                    .price
+                      span.current 25.500₫
+                      span.older 30.000₫
+              .col-md-4.col-sm-6.col-xs-6.clear-md-4.clear-xs-6
+                .cate-prod
+                  .relative
+                    a.reRenderImg.relative(href="")
+                      img(src="img/prod1.jpg")
+                    .dp-mid-center
+                      a.quick_views(href="")
+                        img(src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh")
+                      a.view_product(href="")
+                        img(src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết")
+                      a.add-cart(href="")
+                        img(src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ")
+                    .dp-top-right
+                      | Giảm 92%
+                  .txt
+                    h3
+                      a(href="") Balo nam nữ style dể thương SID49706
+                    .price
+                      span.current 25.500₫
+                      span.older 30.000₫
+              .col-md-4.col-sm-6.col-xs-6.clear-md-4.clear-xs-6
+                .cate-prod
+                  .relative
+                    a.reRenderImg.relative(href="")
+                      img(src="img/prod1.jpg")
+                    .dp-mid-center
+                      a.quick_views(href="")
+                        img(src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh")
+                      a.view_product(href="")
+                        img(src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết")
+                      a.add-cart(href="")
+                        img(src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ")
+                    .dp-top-right
+                      | Giảm 92%
+                  .txt
+                    h3
+                      a(href="") Balo nam nữ style dể thương SID49706
+                    .price
+                      span.current 25.500₫
+                      span.older 30.000₫
+              .col-md-4.col-sm-6.col-xs-6.clear-md-4.clear-xs-6
+                .cate-prod
+                  .relative
+                    a.reRenderImg.relative(href="")
+                      img(src="img/prod1.jpg")
+                    .dp-mid-center
+                      a.quick_views(href="")
+                        img(src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh")
+                      a.view_product(href="")
+                        img(src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết")
+                      a.add-cart(href="")
+                        img(src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ")
+                    .dp-top-right
+                      | Giảm 92%
+                  .txt
+                    h3
+                      a(href="") Balo nam nữ style dể thương SID49706
+                    .price
+                      span.current 25.500₫
+                      span.older 30.000₫
+          // end sanpham-cate
+

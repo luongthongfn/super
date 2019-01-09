@@ -1,0 +1,183 @@
+body.admin-bar{
+  @include mq(768){
+    .sticky-header.fixed{
+      margin-top: 30px;
+    }
+  }
+}
+.overlayBody {
+    position: fixed;
+    z-index: 2;
+    display: none;
+    background: rgba(0, 0, 0, .6);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+[class^='clb'] {
+    clear: both;
+    display: block;
+}
+
+.clb-header {
+    height: 62px;
+}
+
+.clb {
+    clear: both;
+    display: block;
+}
+
+.clb5 {
+    height: 5px;
+}
+
+.clb10 {
+    height: 10px;
+}
+
+.clb20 {
+    height: 20px;
+}
+
+.clb30 {
+    height: 30px;
+}
+
+.clb40 {
+    height: 40px;
+}
+
+.h500 {
+    height: 500px;
+}
+
+.p0 {
+    padding: 0 !important;
+}
+
+.round-0 {
+    border-radius: 0 !important;
+}
+
+.mg0 {
+    margin: 0;
+}
+
+@include p(50);
+@include p(80);
+@include p(100);
+@include p(150);
+@include p(150, 1);
+@include p(200, 1);
+
+
+// /* =========================================================================================================== */
+@include mq(1200) {
+    .row_pc {
+        min-height: 1px;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+
+@include mq(480, max) {
+    .col-480-12 {
+        width: 100% !important;
+    }
+    .col-480-6 {
+        width: 50% !important;
+    }
+}
+
+// /* =========================================================================================================== */
+
+/* begin general  */
+
+.w1 {
+    width: 100% !important;
+}
+
+.wa {
+    width: auto !important;
+    max-width: 100%;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+img{
+  max-width: 100%;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.icon {
+    background: url(../img/sprites.png);
+}
+
+.db {
+    display: block;
+}
+
+.preline {
+    white-space: pre-line;
+}
+
+.relative {
+    position: relative;
+}
+
+.static {
+    position: static;
+}
+
+.fll {
+    float: left;
+}
+
+.flr {
+    float: right;
+}
+
+@include mq(1200) {
+    .row_pc {
+        min-height: 1px;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+
+
+
+/* end general */
+
+@if $w-con>1170 {
+    @media(min-width: ($w-con)+30px) {
+        .container {
+            width: $w-con + px;
+        }
+    }
+}
+
+@else {
+    @media(min-width: 1200px) {
+        .container {
+            width: $w-con + px;
+        }
+    }
+}
+
+
+/* generall  */
+
+
+/* end generall  */
