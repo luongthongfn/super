@@ -92,28 +92,41 @@
 <!-- end banner-->
 <section class="sc-sanpham-hot">
     <div class="container">
+        <h2 class="title-home"><a href="">Danh mục nổi bật</a></h2>
         <div class="m-80">
             <div class="col-md-3 hidden-sm hidden-xs p80">
-                <div class="imgage_hover"><a href=""><img class="insImageload w1" src="img/seller_banner.jpg" alt="Super store"></a></div>
+                <div class="imgage_hover"><a href=""><img class="insImageload w1" src="<?php echo THEME_URL ?>/assets/img/seller_banner.jpg" alt="Super store"></a></div>
             </div>
             <div class="col-md-9 p80">
                 <div class="imgRow">
+                    <?php
+                        // WP_Query arguments
+                        $args = array(
+                            'post_type'              => array( 'sanpham' ),
+                            'posts_per_page'         => '4',
+                            'orderby'                => 'date',
+                        );
+                        // The Query
+                        $query = new WP_Query( $args );
+                    ?>
+                    <?php
+                        if ($query->have_posts()) {
 
-                    <div class="col-lg-200 col-md-3 col-sm-4 col-xs-6 p0">
-                        <div class="prod">
-                            <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
-                                <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product"
-                                        href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png" alt="Thêm vào giỏ"
-                                            title="Thêm vào giỏ"></a></div>
-                                <div class="dp-top-right">Giảm 92%</div>
-                            </div>
-                            <div class="txt">
-                                <h3><a href="">Balo nam nữ style dể thương SID49706</a></h3>
-                                <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
-                            </div>
-                        </div>
-                    </div>
+                            // Load posts loop.
+                            while ( $query->have_posts()) {
+                                $query->the_post();
+                                echo '<div class="col-md-3 col-sm-4 col-xs-6 p0">';
+                                get_template_part('template-parts/content/content','product');
+                                echo '</div>';
+                            }
+                        } else {
 
+                            // If no content, include the "No posts found" template.
+                            get_template_part('template-parts/content/content', 'none');
+
+                        }
+                        wp_reset_postdata();
+                    ?>
                 </div>
             </div>
         </div>

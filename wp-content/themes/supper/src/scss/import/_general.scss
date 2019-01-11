@@ -1,70 +1,80 @@
-body.admin-bar{
-  @include mq(768){
-    .sticky-header.fixed{
+body.admin-bar {
+  @include mq(768) {
+    .sticky-header.fixed {
       margin-top: 30px;
     }
   }
 }
+
+.has-error {
+  position: relative;
+  border-color: #ff0000;
+
+  &:after {
+    content: '';
+  }
+}
+
 .overlayBody {
-    position: fixed;
-    z-index: 2;
-    display: none;
-    background: rgba(0, 0, 0, .6);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    cursor: pointer;
+  position: fixed;
+  z-index: 2;
+  display: none;
+  background: rgba(0, 0, 0, .6);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
 }
 
 [class^='clb'] {
-    clear: both;
-    display: block;
+  clear: both;
+  display: block;
 }
 
 .clb-header {
-    height: 62px;
+  height: 62px;
 }
 
 .clb {
-    clear: both;
-    display: block;
+  clear: both;
+  display: block;
 }
 
 .clb5 {
-    height: 5px;
+  height: 5px;
 }
 
 .clb10 {
-    height: 10px;
+  height: 10px;
 }
 
 .clb20 {
-    height: 20px;
+  height: 20px;
 }
 
 .clb30 {
-    height: 30px;
+  height: 30px;
 }
 
 .clb40 {
-    height: 40px;
+  height: 40px;
 }
 
 .h500 {
-    height: 500px;
+  height: 500px;
 }
 
 .p0 {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .round-0 {
-    border-radius: 0 !important;
+  border-radius: 0 !important;
 }
 
 .mg0 {
-    margin: 0;
+  margin: 0;
 }
 
 @include p(50);
@@ -77,20 +87,21 @@ body.admin-bar{
 
 // /* =========================================================================================================== */
 @include mq(1200) {
-    .row_pc {
-        min-height: 1px;
-        margin-right: -15px;
-        margin-left: -15px;
-    }
+  .row_pc {
+    min-height: 1px;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
 }
 
 @include mq(480, max) {
-    .col-480-12 {
-        width: 100% !important;
-    }
-    .col-480-6 {
-        width: 50% !important;
-    }
+  .col-480-12 {
+    width: 100% !important;
+  }
+
+  .col-480-6 {
+    width: 50% !important;
+  }
 }
 
 // /* =========================================================================================================== */
@@ -98,62 +109,64 @@ body.admin-bar{
 /* begin general  */
 
 .w1 {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 .wa {
-    width: auto !important;
-    max-width: 100%;
+  width: auto !important;
+  max-width: 100%;
 }
 
 a {
-    &:hover {
-        text-decoration: none;
-    }
+  &:hover {
+    text-decoration: none;
+  }
 }
-img{
+
+img {
   max-width: 100%;
 }
+
 ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .icon {
-    background: url(../img/sprites.png);
+  background: url(../img/sprites.png);
 }
 
 .db {
-    display: block;
+  display: block;
 }
 
 .preline {
-    white-space: pre-line;
+  white-space: pre-line;
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
 .static {
-    position: static;
+  position: static;
 }
 
 .fll {
-    float: left;
+  float: left;
 }
 
 .flr {
-    float: right;
+  float: right;
 }
 
 @include mq(1200) {
-    .row_pc {
-        min-height: 1px;
-        margin-right: -15px;
-        margin-left: -15px;
-    }
+  .row_pc {
+    min-height: 1px;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
 }
 
 
@@ -161,19 +174,19 @@ ul {
 /* end general */
 
 @if $w-con>1170 {
-    @media(min-width: ($w-con)+30px) {
-        .container {
-            width: $w-con + px;
-        }
+  @media(min-width: ($w-con)+30px) {
+    .container {
+      width: $w-con + px;
     }
+  }
 }
 
 @else {
-    @media(min-width: 1200px) {
-        .container {
-            width: $w-con + px;
-        }
+  @media(min-width: 1200px) {
+    .container {
+      width: $w-con + px;
     }
+  }
 }
 
 

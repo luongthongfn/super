@@ -1,0 +1,8 @@
+.has-error {
+  position: relative;
+  border-color: #ff0000;
+
+  &:after {
+    content: '';
+  }
+}

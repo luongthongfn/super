@@ -1,18 +1,17 @@
 @import "../import/variable.scss";
 @import "../import/_mixin.scss";
 @import "../import/_placeholder.scss";
+.title-home {
+  @include title-home;
+}
 .sc-sanpham-home {
 	margin-top: 50px;
-	.title-home {
-		@include title-home;
-	}
 	.list-cate-block {
 		li {
 			a {
 				display: inline-block;
 				text-align: center;
 				padding: 5px;
-				float: left;
 				width: 50%;
 				border: 1px solid #ccc;
 				margin-top: -1px;
@@ -106,7 +105,7 @@
 			display: block;
 			padding: 10px 0;
 			text-align: center;
-			
+
 			@include mq(768) {
 				position: absolute;
 				top: 0;

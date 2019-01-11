@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="teal">
     <title>sp</title>
-    <link rel="stylesheet" href="css/menu-2.css">
+    <!-- <link rel="stylesheet" href="css/menu-2.css"> -->
     <?php wp_head() ?>
   </head>
   <body <?php body_class() ?>>

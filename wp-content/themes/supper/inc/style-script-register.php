@@ -27,5 +27,16 @@ function my_styles()
     wp_register_script('custom-js', get_template_directory_uri() . '/assets/js/custom.js', null, true, true);
     wp_enqueue_script('custom-js');
 }
-
 add_action('wp_enqueue_scripts', 'my_styles');
+
+//admin
+// validation metabox
+function add_post_validtate()
+{
+    // css
+    wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/admin-style.css');
+
+    //js
+    wp_enqueue_script('my_script_js', get_template_directory_uri() . '/assets/js/adminPost.validation.js', array('jquery'));
+}
+add_action('admin_enqueue_scripts', 'add_post_validtate');
