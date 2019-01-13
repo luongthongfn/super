@@ -15,6 +15,44 @@ body.admin-bar {
   }
 }
 
+.bg1 {
+  background: $c1;
+}
+
+.bg2 {
+  background: $c2;
+}
+
+
+.bg3 {
+  background: $c3;
+}
+
+.bg4 {
+  background: $c4;
+}
+
+.c1 {
+  color: $c1;
+  font-weight: bold;
+}
+
+.c2 {
+  color: $c2;
+}
+
+.c3 {
+  color: $c3;
+}
+
+.c4 {
+  color: $c4;
+}
+
+
+.bg-gray {
+  background: $c-gray;
+}
 .overlayBody {
   position: fixed;
   z-index: 2;

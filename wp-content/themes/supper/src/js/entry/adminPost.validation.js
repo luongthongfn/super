@@ -1,8 +1,10 @@
 import validate from 'jquery-validation';
-(function ($) {
 
-  $(function () {
-    $('#post').validate({
+
+$(function () {
+  var post = $('#post');
+  if (post.length) {
+    post.validate({
       focusInvalid: true,
       rules: {
         //key is name of input
@@ -15,6 +17,5 @@ import validate from 'jquery-validation';
         $(element).removeClass("has-error")
       }
     })
-  })
-
-})(jQuery)
+  }
+})

@@ -15,10 +15,6 @@ html {
     font-size: 100%;
 }
 
-.sc_header_menu {
-    //background: #1d0080;
-}
-
 .menu_main {
     background-size: 100% 100%;
 }
@@ -92,10 +88,7 @@ html {
     padding: 1.25rem 1rem;
     border: 0;
     background-color: $mn-toggle;
-
-    float: left;
     width: 60px;
-    /*position: fixed;*/
     outline: none;
     z-index: 99;
 }
@@ -181,11 +174,11 @@ html {
 }
 
 .nav-menu>.menu-item .has-dropdown.is-active {
-    background: $mn-drop+#222;
+    background: lighten($mn-drop, 30);
 }
 
 .nav-menu>.menu-item .has-dropdown:hover {
-    background: $mn-drop+#222;
+    background: lighten($mn-drop, 30);
 }
 
 .nav-menu>.menu-item.is-active.has-dropdown:after,
@@ -255,10 +248,6 @@ html {
 .has-dropdown.is-active>.nav-dropdown {
     display: block;
     /* 1 */
-}
-
-.nav-dropdown .nav-dropdown {
-    // background-color: #aaa;
 }
 
 .nav-dropdown .nav-dropdown .menu-iftem {
@@ -429,7 +418,6 @@ html {
                     background: #fff;
                     display: inline-block;
                     width: 20%;
-                    float: left;
                     border: none;
                     a {
                         color: #000
@@ -507,7 +495,7 @@ html {
 
     .nav-dropdown .menu-item {
         border: none;
-        border-bottom: 1px solid ($c1 + #111111);
+        border-bottom: 1px solid lighten($c1, 27);
         margin-top: 0px;
     }
 
@@ -520,14 +508,9 @@ html {
         background-color: $c1;
     }
 
-    .nav-dropdown .menu-item:hover .menu-link,
-    .nav-dropdown .menu-item:hover .menu-link {
-        //color: $nav-hver;
-    }
-
     .nav-dropdown .nav-dropdown,
     .nav-dropdown .nav-dropdown .menu-item {
-        background-color: $c1+#222;
+        background-color: lighten($c1, 27);
     }
 
     .nav-dropdown .nav-dropdown {
@@ -611,25 +594,11 @@ html {
     .nav-menu.menu.clearfix {
         font-size: 0;
     }
-    /*------------------*/
-    .nav-menu>.menu-item.active>.menu-link,
-    .nav-menu>.menu-item:hover>.menu-link {
-        /* background: rgba(255,255,255,0.1); */
-        /* color: $c1; */
-    }
 
     .nav-menu>.menu-item.active>.menu-link {
         /* color: #fff; */
         background: #0c6136;
         // border-radius: 4px;
-    }
-
-    .nav-menu>.menu-item:hover>.menu-link {
-        // color: $nav-hver;
-    }
-    /*-----------------*/
-    .nav-menu>.menu-item>a:hover {
-        /* color: $nav-hver; */
     }
 
     .nav-dropdown {

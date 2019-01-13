@@ -3,7 +3,16 @@
 @import "../import/_placeholder.scss";
 .sc-sanpham-hot {
 	.prod {
-		@include prod;
+    @include prod;
+    h3{
+      @include text-fix(32,2);
+    }
+    .price{
+      height: 15px;
+      .older{
+        vertical-align: bottom;
+      }
+    }
 	}
 	.slider_prod_hot {
 		&.owl-carousel {

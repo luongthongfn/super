@@ -49,7 +49,7 @@ var gulp = require('gulp'),
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function () {
-  return gulp.src([path.scss.src, 'src/scss/entry/**', '!src/scss/module/**'])
+  return gulp.src([path.scss.src, 'src/scss/entry/**/*.scss', '!src/scss/module/**/*.scss'])
     .pipe(bulkSass())
     .pipe(sourcemaps.init())
     .pipe(sass({

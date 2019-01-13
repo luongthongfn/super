@@ -2,7 +2,6 @@ $(window).on('load', function () {
   function Render_img() {
     'use strict';
     if ($('.imgRow').length) {
-      console.log('row')
       $(".reRenderImg img").css('height', 'auto');
       $(".imgRow").each(function () {
         var thisRow,

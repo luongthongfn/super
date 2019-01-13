@@ -97,13 +97,14 @@
             <div class="col-md-3 hidden-sm hidden-xs p80">
                 <div class="imgage_hover"><a href=""><img class="insImageload w1" src="<?php echo THEME_URL ?>/assets/img/seller_banner.jpg" alt="Super store"></a></div>
             </div>
-            <div class="col-md-9 p80">
-                <div class="imgRow">
+            <div class="col-md-9">
+                <div class="slider_prod_hot owl-carousel imgRow">
+
                     <?php
                         // WP_Query arguments
                         $args = array(
                             'post_type'              => array( 'sanpham' ),
-                            'posts_per_page'         => '4',
+                            'posts_per_page'         => '10',
                             'orderby'                => 'date',
                         );
                         // The Query
@@ -115,7 +116,7 @@
                             // Load posts loop.
                             while ( $query->have_posts()) {
                                 $query->the_post();
-                                echo '<div class="col-md-3 col-sm-4 col-xs-6 p0">';
+                                echo '<div class="item">';
                                 get_template_part('template-parts/content/content','product');
                                 echo '</div>';
                             }
@@ -127,6 +128,7 @@
                         }
                         wp_reset_postdata();
                     ?>
+
                 </div>
             </div>
         </div>
