@@ -43,8 +43,9 @@ function add_post_validtate()
 add_action('admin_enqueue_scripts', 'add_post_validtate');
 
 //upload media
-// function admin_upload_media()
-// {
-//     wp_enqueue_media();
-// }
-// add_action('admin_enqueue_scripts', 'admin_upload_media');
+function admin_upload_media()
+{
+    wp_enqueue_media();
+    wp_enqueue_script('my_script_upload_js', get_template_directory_uri() . '/assets/js/adminMediaUpload.js');
+}
+add_action('admin_enqueue_scripts', 'admin_upload_media');

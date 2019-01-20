@@ -195,11 +195,15 @@ gulp.task('watch', ['BSync', 'sass', 'script', 'entryScript', 'pug'], function (
   gulp.watch('./src/pug/**/*.pug', ['pug']);
   gulp.watch(path.img.dist, browserSync.reload);
 });
+
 gulp.task('wp', ['sass', 'script', 'pug'], function () {
   gulp.watch(path.scss.src, ['sass']);
   gulp.watch([path.js.src, '!./src/js/custom.js'], ['script', 'entryScript']);
   gulp.watch('./src/pug/**/*.pug', ['pug']);
   gulp.watch(path.img.dist, browserSync.reload);
+});
+gulp.task('whatchEntry', ['entryScript'], function () {
+    gulp.watch('./src/js/entry/*.js', ['entryScript']);
 });
 
 gulp.task('build', ['sass', 'script', 'entryScript', 'pug']);

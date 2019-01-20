@@ -4,9 +4,12 @@ require('_CONSTANT.php');
 // {
 //     echo('glob__'.$filename);
 // }
-include('include-file/custom-post-type.php');
-include('include-file/custom-taxonomy.php');
 include('include-file/theme-support.php');
 include('include-file/style-script-register.php');
 include('include-file/template-function.php');
-include('include-file/custom-taxonomy-add-custom-field.php');
+
+include('include-file/custom-post-type.php');
+include('include-file/custom-post-type-add-meta-box.php');
+
+include('include-file/custom-taxonomy.php');
+include('include-file/custom-taxonomy-add-meta-box.php');

@@ -6,3 +6,20 @@
     content: '';
   }
 }
+.display_media{
+
+    li{
+        position: relative;
+        display: inline-block;
+        img{
+            max-width: 100%;
+        }
+    }
+
+    .dashicons-dismiss{
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+}
