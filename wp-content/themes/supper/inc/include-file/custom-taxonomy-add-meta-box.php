@@ -103,9 +103,7 @@ function save_taxonomy_custom_meta($term_id)
         //     }
         // }
 
-        echo '<pre>';
-        print_r($_POST);
-        echo '</pre>';
+
         $t_id = $term_id;
 
         $cat_keys = array_keys($_POST['meta_data']);

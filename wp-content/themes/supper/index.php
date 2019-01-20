@@ -134,4 +134,185 @@
         </div>
     </div>
 </section>
+
+
+<section class="sc-sanpham-home">
+    <div class="container">
+        <h2 class="title-home"><a href="">THỜI TRANG & SẮC ĐẸP</a></h2>
+        <div class="row m-80">
+            <div class="col-md-3 hidden-sm hidden-xs p80">
+                <ul class="list-cate-block clearfix">
+                    <li><a href=""><img src="img/brand_1_block_home_1.png"><span>Áo nam/nữ</span></a></li>
+                    <li><a href=""><img src="img/brand_1_block_home_1.png"><span>Áo nam/nữ</span></a></li>
+                    <li><a href=""><img src="img/brand_1_block_home_1.png"><span>Áo nam/nữ</span></a></li>
+                    <li><a href=""><img src="img/brand_1_block_home_1.png"><span>Áo nam/nữ</span></a></li>
+                    <li><a href=""><img src="img/brand_1_block_home_1.png"><span>Áo nam/nữ</span></a></li>
+                    <li><a href=""><img src="img/brand_1_block_home_1.png"><span>Áo nam/nữ</span></a></li>
+                </ul><a href=""><img class="w1" src="img/banner_block_home_1.jpg" style="margin-left: -1px"></a>
+            </div>
+            <div class="col-md-9 p80">
+                <div class="main-block">
+                    <!-- Nav tabs-->
+                    <div class="home-tab-mb btn btn-default hidden-lg hidden-md hidden-sm flr"><i class="fa fa-list"></i></div>
+                    <ul class="home-tabs ajax-tabs" role="tablist">
+                        <li class="active" role="presentation"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Mỹ phẩm</a></li>
+                        <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Thời trang</a></li>
+                        <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">
+                                Viên uống chức
+                                năng</a></li>
+                        <li role="presentation"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Trang sức</a></li>
+                        <li role="presentation"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab">Bán chạy</a></li>
+                    </ul>
+                    <!-- Tab panes-->
+                    <div class="tab-content home-tabs-content">
+                        <div class="tab-pane active imgRow" role="tabpanel" id="tab1">
+                            <div class="col-lg-200 col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="home-prod">
+                                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                                        <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product"
+                                                href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png"
+                                                    alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                                        <div class="dp-top-right">Giảm 92%</div>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><a href="">Balo nam nữ style dể thương SID49706 1</a></h3>
+                                        <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-200 col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="home-prod">
+                                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                                        <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product"
+                                                href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png"
+                                                    alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                                        <div class="dp-top-right">Giảm 92%</div>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><a href="">Balo nam nữ style dể thương SID49706 1</a></h3>
+                                        <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-200 col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="home-prod">
+                                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                                        <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product"
+                                                href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png"
+                                                    alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                                        <div class="dp-top-right">Giảm 92%</div>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><a href="">Balo nam nữ style dể thương SID49706 1</a></h3>
+                                        <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-200 col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="home-prod">
+                                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                                        <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product"
+                                                href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png"
+                                                    alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                                        <div class="dp-top-right">Giảm 92%</div>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><a href="">Balo nam nữ style dể thương SID49706 1</a></h3>
+                                        <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-200 col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="home-prod">
+                                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                                        <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product"
+                                                href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png"
+                                                    alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                                        <div class="dp-top-right">Giảm 92%</div>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><a href="">Balo nam nữ style dể thương SID49706 1</a></h3>
+                                        <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-200 col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="home-prod">
+                                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                                        <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product"
+                                                href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png"
+                                                    alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                                        <div class="dp-top-right">Giảm 92%</div>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><a href="">Balo nam nữ style dể thương SID49706 1</a></h3>
+                                        <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-200 col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="home-prod">
+                                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                                        <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product"
+                                                href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png"
+                                                    alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                                        <div class="dp-top-right">Giảm 92%</div>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><a href="">Balo nam nữ style dể thương SID49706 1</a></h3>
+                                        <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-200 col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="home-prod">
+                                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                                        <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product"
+                                                href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png"
+                                                    alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                                        <div class="dp-top-right">Giảm 92%</div>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><a href="">Balo nam nữ style dể thương SID49706 1</a></h3>
+                                        <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-200 col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="home-prod">
+                                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                                        <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product"
+                                                href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png"
+                                                    alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                                        <div class="dp-top-right">Giảm 92%</div>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><a href="">Balo nam nữ style dể thương SID49706 1</a></h3>
+                                        <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-200 col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="home-prod">
+                                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                                        <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product"
+                                                href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png"
+                                                    alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                                        <div class="dp-top-right">Giảm 92%</div>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><a href="">Balo nam nữ style dể thương SID49706 1</a></h3>
+                                        <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="more"><a href="">Xem thêm</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <?php get_footer()?>
