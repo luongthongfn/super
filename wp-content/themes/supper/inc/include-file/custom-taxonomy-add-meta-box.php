@@ -45,20 +45,20 @@ function pippin_taxonomy_edit_meta_field($term)
                 <?php $input_name = 'feature';?>
 
                 <label><?php _e('Thêm ảnh đại diện cho danh mục', 'super')?></label>
-                <input id="<?=$input_name?>_input" type="hidden" name="meta_data[<?=$input_name?>]" value="<?= $term_meta[$input_name]? esc_attr($term_meta[$input_name][0]) : '' ?>">
+                <input id="<?=$input_name?>_input" type="hidden" name="meta_data[<?=$input_name?>]" value="<?=isset($term_meta[$input_name]) ? esc_attr($term_meta[$input_name][0]) : ''?>">
             </th>
             <td>
                 <button id="pick_<?=$input_name?>" class="button">Select Images</button>
 
                 <ul id="display_<?=$input_name?>" class="display_media">
-                <?php if( isset( $term_meta[$input_name]) ): ?>
-                    <?php foreach($term_meta[$input_name] as $id): ?>
-                        <?php $attachment_url = wp_get_attachment_url(esc_attr($id)) ?>
+                <?php if (isset($term_meta[$input_name])): ?>
+                    <?php foreach ($term_meta[$input_name] as $id): ?>
+                        <?php $attachment_url = wp_get_attachment_url(esc_attr($id))?>
                         <li>
-                            <img src="<?= $attachment_url ?>" alt="">
+                            <img src="<?=$attachment_url?>" alt="">
                         </li>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+                    <?php endforeach;?>
+                <?php endif;?>
                 </ul>
             </td>
         </tr>
@@ -68,20 +68,20 @@ function pippin_taxonomy_edit_meta_field($term)
                 <?php $input_name = 'icon';?>
 
                 <label><?php _e('Thêm icon cho danh mục', 'super')?></label>
-                <input id="<?=$input_name?>_input" type="hidden" name="meta_data[<?=$input_name?>]" value="<?= $term_meta[$input_name]? esc_attr($term_meta[$input_name][0]) : '' ?>">
+                <input id="<?=$input_name?>_input" type="hidden" name="meta_data[<?=$input_name?>]" value="<?=isset($term_meta[$input_name]) ? esc_attr($term_meta[$input_name][0]) : ''?>">
             </th>
             <td>
                 <button id="pick_<?=$input_name?>" class="button">Select Images</button>
 
                 <ul id="display_<?=$input_name?>" class="display_media">
-                    <?php if( isset($term_meta[$input_name]) ): ?>
-                        <?php foreach($term_meta[$input_name] as $id): ?>
-                            <?php $attachment_url = wp_get_attachment_url($id) ?>
+                    <?php if (isset($term_meta[$input_name])): ?>
+                        <?php foreach ($term_meta[$input_name] as $id): ?>
+                            <?php $attachment_url = wp_get_attachment_url($id)?>
                             <li>
-                                <img src="<?= $attachment_url ?>" alt="">
+                                <img src="<?=$attachment_url?>" alt="">
                             </li>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
+                        <?php endforeach;?>
+                    <?php endif;?>
                 </ul>
             </td>
         </tr>
@@ -94,28 +94,14 @@ add_action('prod_cate_edit_form_fields', 'pippin_taxonomy_edit_meta_field', 10, 
 function save_taxonomy_custom_meta($term_id)
 {
     if (isset($_POST['meta_data']) && wp_verify_nonce($_POST['nonce_metadata'], 'nonce_metadata_action')) {
-        // $t_id = $term_id;
-        // $term_meta = get_option("taxonomy_$t_id");
-        // $cat_keys = array_keys($_POST['term_meta']);
-        // foreach ($cat_keys as $key) {
-        //     if (isset($_POST['term_meta'][$key])) {
-        //         $term_meta[$key] = $_POST['term_meta'][$key];
-        //     }
-        // }
-
-
-        $t_id = $term_id;
 
         $cat_keys = array_keys($_POST['meta_data']);
-        foreach ($cat_keys as $key) {
-            if (isset($_POST['meta_data'][$key])) {
+        foreach ( $cat_keys as $key ) {
+            if ( isset($_POST['meta_data'][$key]) ) {
                 $term_meta[$key] = $_POST['meta_data'][$key];
-                update_term_meta($t_id, $key, $_POST['meta_data'][$key]);
+                update_term_meta($term_id, $key, $_POST['meta_data'][$key]);
             }
         }
-
-        // lưu mảng tùy chọn
-        // update_term_meta($t_id, $term_meta);
     }
 }
 add_action('edited_prod_cate', 'save_taxonomy_custom_meta', 10, 2);
