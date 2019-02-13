@@ -54,27 +54,7 @@ $(function () {
   });
 
   //----sticky-header
-  if ($('.sticky-header').length) {
-      var _this = $('.sticky-header');
-      _this.after("<div class='after-fixed'></div>");
-      var stickyPos = _this.offset().top;
-      $('.after-fixed').css('padding-top', $('.fixed').height());
 
-      $(window).scroll(function () {
-          if (window.innerWidth > 992) {
-              if ($(window).scrollTop() >= stickyPos) {
-                  _this.addClass('fixed');
-                  $('.after-fixed').css('padding-top', $('.fixed').height());
-              } else {
-                  _this.removeClass('fixed');
-                  $('.after-fixed').css('padding-top', '0px');
-              }
-          } else {
-              _this.removeClass('fixed');
-              $('.after-fixed').css('padding-top', '0px');
-          }
-      })
-  }
 })
 
 // search-box

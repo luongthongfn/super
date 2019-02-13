@@ -37,8 +37,10 @@ function add_post_validtate()
     wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/admin-style.css');
 
     //js
-    wp_enqueue_script('admin_jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js');
-    wp_enqueue_script('my_script_js', get_template_directory_uri() . '/assets/js/adminPost.validation.js');
+    $current_screen = get_current_screen();
+    if ($current_screen->base == 'post' && $current_screen->post_type=='sanpham') {
+        wp_enqueue_script('my_script_js', get_template_directory_uri() . '/assets/js/adminPost.validation.js', array('jquery'));
+    }
 }
 add_action('admin_enqueue_scripts', 'add_post_validtate');
 

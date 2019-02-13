@@ -1,2 +1,135 @@
-!function r(o,c,s){function u(i,t){if(!c[i]){if(!o[i]){var e="function"==typeof require&&require;if(!t&&e)return e(i,!0);if(l)return l(i,!0);var n=new Error("Cannot find module '"+i+"'");throw n.code="MODULE_NOT_FOUND",n}var a=c[i]={exports:{}};o[i][0].call(a.exports,function(t){return u(o[i][1][t]||t)},a,a.exports,r,o,c,s)}return c[i].exports}for(var l="function"==typeof require&&require,t=0;t<s.length;t++)u(s[t]);return u}({1:[function(t,i,e){"use strict";jQuery(document).ready(function(a){var n=[];a("#pick_feature").click(function(t){t.preventDefault();var i=wp.media.frames.file_frame=wp.media({title:"Select Images",library:{},button:{text:"Select"},multiple:!1});i.on("open",function(){var t=a("#feature_input").val();t=t.split(",");var n=i.state().get("selection");a.each(t,function(t,i){var e=wp.media.attachment(i);e&&e.fetch(),n.add(e?[e]:[])})}),i.on("select",function(){var t=i.state().get("selection").toJSON(),e="";a.each(t,function(t,i){n.push(i.id),e+='<li data-image-id="'+i.id+'">',e+='<img src="'+i.url+'" />',e+='<span class="dashicons dashicons-dismiss" data-id='+i.id+"></span>",e+="</li>"}),a("#feature_input").val(n.join(",")),a("#display_feature").html(e)}),a("#display_feature").on("click",".dashicons-dismiss",function(){var i=a(this).data("id");n=n.filter(function(t){return t!=i}),a("#feature_input").val(n.join(",")),a(this).parent("li").remove()}),i.open()});var r=[];a("#pick_icon").click(function(t){t.preventDefault();var i=wp.media.frames.file_frame=wp.media({title:"Select Images",library:{},button:{text:"Select"},multiple:!1});i.on("open",function(){var t=a("#icon_input").val();t=t.split(",");var n=i.state().get("selection");a.each(t,function(t,i){var e=wp.media.attachment(i);e&&e.fetch(),n.add(e?[e]:[])})}),i.on("select",function(){var t=i.state().get("selection").toJSON(),e="";a.each(t,function(t,i){r.push(i.id),e+='<li data-image-id="'+i.id+'">',e+='<img src="'+i.url+'" />',e+='<span class="dashicons dashicons-dismiss" data-id='+i.id+"></span>",e+="</li>"}),a("#icon_input").val(r.join(",")),a("#display_icon").html(e)}),a("#display_icon").on("click",".dashicons-dismiss",function(){var i=a(this).data("id");r=r.filter(function(t){return t!=i}),a("#icon_input").val(r.join(",")),a(this).parent("li").remove()}),i.open()})})},{}]},{},[1]);
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+"use strict";
+
+jQuery(document).ready(function ($) {
+  /*
+  We have a button which has id attribute "pick_images"
+  When click the button, the wp media popup show. We choose images and press Select (like set featured image)
+  */
+  //feature media upload
+  var attachment_feature_ids = [];
+  $('#pick_feature').click(function (event) {
+    event.preventDefault(); // Prevent reload page when click the button
+    // Initialize.
+
+    var file_frame = wp.media.frames.file_frame = wp.media({
+      title: 'Select Images',
+      // The title of frame
+      library: {},
+      // Library of images, like as post
+      button: {
+        text: 'Select'
+      },
+      multiple: false // Enable select multiple
+
+    });
+    /*
+     * Select images if it is selected, after you click button "pick_images" again
+     */
+
+    file_frame.on('open', function () {
+      var images = $('#feature_input').val();
+      images = images.split(','); // Get all images id and split to an array
+      // And select it
+
+      var selection = file_frame.state().get('selection');
+      $.each(images, function (index, el) {
+        var attachment = wp.media.attachment(el);
+        !!attachment ? attachment.fetch() : null;
+        selection.add(attachment ? [attachment] : []);
+      });
+    }); // Select images event
+
+    file_frame.on('select', function () {
+      var attachment = file_frame.state().get('selection').toJSON(),
+          imgs_html = ''; // Each selected image, push the id of image to an array and show image
+
+      $.each(attachment, function (index, item) {
+        attachment_feature_ids.push(item.id);
+        imgs_html += '<li data-image-id="' + item.id + '">';
+        imgs_html += '<img src="' + item.url + '" />';
+        imgs_html += '<span class="dashicons dashicons-dismiss" data-id=' + item.id + '></span>'; // Button to remove image
+
+        imgs_html += '</li>';
+      });
+      $('#feature_input').val(attachment_feature_ids.join(',')); // List of all images
+
+      $('#display_feature').html(imgs_html); // Show images
+    });
+    $('#display_feature').on('click', '.dashicons-dismiss', function () {
+      var id = $(this).data('id');
+      attachment_feature_ids = attachment_feature_ids.filter(function (item) {
+        return item != id;
+      });
+      $('#feature_input').val(attachment_feature_ids.join(','));
+      $(this).parent('li').remove();
+    }); // Open media popup
+
+    file_frame.open();
+  }); //icon media upload
+
+  var attachment_icon_ids = [];
+  $('#pick_icon').click(function (event) {
+    event.preventDefault(); // Prevent reload page when click the button
+    // Initialize.
+
+    var file_frame = wp.media.frames.file_frame = wp.media({
+      title: 'Select Images',
+      // The title of frame
+      library: {},
+      // Library of images, like as post
+      button: {
+        text: 'Select'
+      },
+      multiple: false // Enable select multiple
+
+    });
+    /*
+     * Select images if it is selected, after you click button "pick_images" again
+     */
+
+    file_frame.on('open', function () {
+      var images = $('#icon_input').val();
+      images = images.split(','); // Get all images id and split to an array
+      // And select it
+
+      var selection = file_frame.state().get('selection');
+      $.each(images, function (index, el) {
+        var attachment = wp.media.attachment(el);
+        !!attachment ? attachment.fetch() : null;
+        selection.add(attachment ? [attachment] : []);
+      });
+    }); // Select images event
+
+    file_frame.on('select', function () {
+      var attachment = file_frame.state().get('selection').toJSON(),
+          imgs_html = ''; // Each selected image, push the id of image to an array and show image
+
+      $.each(attachment, function (index, item) {
+        attachment_icon_ids.push(item.id);
+        imgs_html += '<li data-image-id="' + item.id + '">';
+        imgs_html += '<img src="' + item.url + '" />';
+        imgs_html += '<span class="dashicons dashicons-dismiss" data-id=' + item.id + '></span>'; // Button to remove image
+
+        imgs_html += '</li>';
+      });
+      $('#icon_input').val(attachment_icon_ids.join(',')); // List of all images
+
+      $('#display_icon').html(imgs_html); // Show images
+    });
+    $('#display_icon').on('click', '.dashicons-dismiss', function () {
+      var id = $(this).data('id');
+      attachment_icon_ids = attachment_icon_ids.filter(function (item) {
+        return item != id;
+      });
+      $('#icon_input').val(attachment_icon_ids.join(','));
+      $(this).parent('li').remove();
+    }); // Open media popup
+
+    file_frame.open();
+  });
+});
+
+},{}]},{},[1])
+
 //# sourceMappingURL=../maps/adminMediaUpload.js.map

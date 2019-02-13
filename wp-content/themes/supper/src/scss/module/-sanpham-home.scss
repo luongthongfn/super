@@ -9,7 +9,7 @@
 	.list-cate-block {
 		li {
 			a {
-				display: inline-block;
+				float: left;
 				text-align: center;
 				padding: 5px;
 				width: 50%;
@@ -146,7 +146,10 @@
 			}
 			.relative {
 				max-height: 138px;
-			}
+            }
+            h3{
+                @include text-fix(35, 2)
+            }
 		}
 	}
 }

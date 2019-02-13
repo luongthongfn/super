@@ -156,9 +156,9 @@ gulp.task('entryScript', () => {
         .pipe(sourcemaps.init({
           loadMaps: true
         }))
-        .pipe(uglify({
-          // drop_console: true
-        })).on('error', log.error)
+        // .pipe(uglify({
+        //   // drop_console: true
+        // })).on('error', log.error)
         .pipe(flatten())
         .pipe(sourcemaps.write(mapsFolder))
         .pipe(gulp.dest(path.js.dest))
