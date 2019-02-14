@@ -8,9 +8,8 @@ $(function () {
 
         _this.after("<div class='after-fixed'></div>");
         $('.after-fixed').css('padding-top', $('.fixed').height());
-        console.log('stickypos', stickyPos)
+
         stickyPos = adminbar.length ? stickyPos - 32: stickyPos;
-        console.log('stickypos', stickyPos)
         $(window).scroll(function () {
             if (window.innerWidth > 992) {
                 if ($(window).scrollTop() >= stickyPos) {

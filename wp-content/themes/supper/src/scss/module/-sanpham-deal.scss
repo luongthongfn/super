@@ -11,6 +11,9 @@
         .relative {
             height: auto;
         }
+        h3{
+            @include text-fix(32, 2)
+        }
     }
     .deal-countdown {
         display: block;
@@ -30,7 +33,7 @@
                 position: relative;
                 line-height: 30px;
                 min-height: 30px;
-                
+
                 border-radius: 0 0 0 18px;
                 &:before {
                     content: "";
@@ -55,7 +58,7 @@
             	display: block;
                 border-radius: 0;
                 padding: 0;
-                
+
                 span{
                 	position: relative;
                 	z-index: 2;

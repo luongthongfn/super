@@ -1661,6 +1661,14 @@ $(function () {
   var post = $('#post');
 
   if (post.length) {
+    var flashsaleCheck = function flashsaleCheck() {
+      if ($(this).is(':checked')) {
+        $('#check-flashsale').show();
+      } else {
+        $('#check-flashsale').hide();
+      }
+    };
+
     post.validate({
       focusInvalid: true,
       rules: {
@@ -1674,6 +1682,9 @@ $(function () {
         $(element).removeClass("has-error");
       }
     });
+    var checkbox = $('#flashsale');
+    flashsaleCheck.apply(checkbox);
+    checkbox.change(flashsaleCheck);
   }
 });
 

@@ -17,5 +17,19 @@ $(function () {
                 $(element).removeClass("has-error")
             }
         })
+
+        var checkbox = $('#flashsale');
+        function flashsaleCheck() {
+
+            if ( $(this).is(':checked') ) {
+                $('#check-flashsale').show();
+            } else {
+                $('#check-flashsale').hide();
+            }
+        }
+
+        flashsaleCheck.apply(checkbox);
+
+        checkbox.change(flashsaleCheck)
     }
 })

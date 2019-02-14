@@ -169,7 +169,7 @@ $(() => {
       }
     },
     slideBy: 1,
-    loop: true,
+    loop: false,
     rewind: true,
     autoplay: true,
     autoplayTimeout: 4000,
