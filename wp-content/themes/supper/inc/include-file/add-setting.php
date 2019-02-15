@@ -1,5 +1,5 @@
 <?php
-function setting_address_callback()
+/* function setting_address_callback()
 {
     ?>
         <textarea id="" cols="80" rows="10" name="setting_address" ><?= get_option('setting_address') ?></textarea>
@@ -28,3 +28,4 @@ function your_function(){
     register_setting('general', 'setting_email', 'esc_attr');
 }
 add_action('admin_init', 'your_function');
+ */

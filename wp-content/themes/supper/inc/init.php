@@ -6,6 +6,7 @@ require('_CONSTANT.php');
 // }
 
 include('include-file/add-setting.php');
+include('include-file/add-setting-class.php');
 
 include('include-file/theme-support.php');
 include('include-file/style-script-register.php');

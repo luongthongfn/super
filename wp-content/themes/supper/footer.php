@@ -122,11 +122,16 @@
             <div class="row">
                 <div class="col-md-9 col-sm-12 col-xs-12">
                     <div class="bot-ft clearfix insScroll">
-                        <div class="col-md-4 logo-ft-1 hidden-xs hidden-sm"><a href="/" title="Bộ công thương"><img class="insImageload wa" data-load="true" src="<?php echo THEME_URL ?>/assets/img/dtb.png"></a></div>
+                        <div class="col-md-4 logo-ft-1 hidden-xs hidden-sm">
+                            <a href="/" title="Bộ công thương"><img class="insImageload wa" data-load="true" src="<?php echo THEME_URL ?>/assets/img/dtb.png"></a>
+                        </div>
                         <div class="col-md-8 copy">
-                            <p>Công ty TMDV Super store<br> Template bán hàng đẹp, nhiều tính năng, khả năng Responsive thân thiện với người dùng. Tương thích với mọi thiết bị di
-                                động.<br> Địa chỉ: Số 288, Dương Đình Hội, P. Tăng Nhơn Phú B, Quận 9 - TP Hồ Chí Minh<br> ĐT:<a href="tel:01662465188">01662 465 188</a><br>
-                                Email:<a href="mailto:inspire.itdev@gmail.com">inspire.itdev@gmail.com</a>
+                            <p>
+                                Công ty TMDV Super store<br> Template bán hàng đẹp, nhiều tính năng, khả năng Responsive thân thiện với người dùng. Tương thích với mọi thiết bị di
+                                động.<br>
+                                Địa chỉ: <?= get_option('setting_about')['address'] ?><br>
+                                ĐT:<a href="tel:<?= get_option('setting_about')['phone'] ?>"><?= get_option('setting_about')['phone'] ?></a><br>
+                                Email:<a href="mailto:<?= get_option('setting_about')['email'] ?>"><?= get_option('setting_about')['email'] ?></a>
                             </p>
                         </div>
                     </div>

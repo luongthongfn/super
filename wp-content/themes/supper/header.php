@@ -29,9 +29,13 @@
                     <span class="flr">
                         <div class="control-box">
                             <ul class="ul-control-box">
-                                <li class="top-cart-block"><a class="open-cart-popup" href="/cart" title="Giỏ hàng"><span class="div-user-control control-4" id="cartItemsCount"></span><span
-                                            class="header-cart-count CartCount" id="count_Cart_mobile">0</span></a></li>
-                                <li class="dropdown" id="segment_user_do_login"><a class="info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <li class="top-cart-block">
+                                    <a class="open-cart-popup" href="/cart" title="Giỏ hàng">
+                                        <span class="div-user-control control-4" id="cartItemsCount"></span>
+                                        <span class="header-cart-count CartCount" id="count_Cart_mobile">0</span></a>
+                                    </li>
+                                <li class="dropdown" id="segment_user_do_login">
+                                    <a class="info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         <div class="div-user-control control-2"></div>
                                     </a>
                                     <ul class="dropdown-menu info-user" aria-labelledby="dLabel">
@@ -51,15 +55,15 @@
                     <div class="hd-top-left">
                         <div class="part">
                             <i class="fa fa-map-marker"></i>
-                            <?= get_option('setting_address') ?>
+                            <?= get_option('setting_about')['address'] ?>
                         </div>
                         <div class="part">
                             <i class="fa fa-envelope"></i>
-                            <?php echo get_option('setting_email') ?>
+                            <?php echo get_option('setting_about')['email'] ?>
                         </div>
                         <div class="part">
                             <i class="fa fa-mobile"></i>
-                            <?php echo get_option('setting_phone') ?>
+                            <?php echo get_option('setting_about')['phone'] ?>
                         </div>
                     </div>
                 </div>
@@ -82,8 +86,8 @@
                             <form class="box_search">
                                 <div class="input-group">
                                     <div class="input-group-addon"><i class="fa fa-search"></i></div>
-                                    <input class="form-control input_search" type="text" placeholder="Search"><span class="input-group-btn">
-                                        <button class="btn btn-default butt_search" type="button">Tìm kiếm</button></span>
+                                    <input class="form-control input_search" type="text" placeholder="Search">
+                                    <span class="input-group-btn"> <button class="btn btn-default butt_search" type="button">Tìm kiếm</button></span>
                                 </div>
                             </form>
                             <ul class="chir_autocomplete">
@@ -94,10 +98,18 @@
                         <div class="col-lg-3 col-md-4">
                             <div class="control-box">
                                 <ul class="ul-control-box">
-                                    <li class="top-hotline"><a href="/apps/kiem-tra-don-hang" title="Hot line"><span class="div-user-control control-4"><img src="<?php echo THEME_URL ?>/assets/img/phone.png"></span><span
-                                                class="info">Tra cứu đơn hàng</span></a></li>
-                                    <li class="top-cart-block"><a class="open-cart-popup" href="/cart" title="Giỏ hàng"><span class="div-user-control control-4" id="cartItemsCount"></span><span
-                                                class="info">Giỏ hàng</span><span class="header-cart-count CartCount" id="count_Cart">0</span></a></li>
+                                    <li class="top-hotline">
+                                        <a href="/apps/kiem-tra-don-hang" title="Hot line">
+                                            <span class="div-user-control control-4"><img src="<?php echo THEME_URL ?>/assets/img/phone.png"></span>
+                                            <span class="info">Tra cứu đơn hàng</span>
+                                        </a>
+                                    </li>
+                                    <li class="top-cart-block">
+                                        <a class="open-cart-popup" href="/cart" title="Giỏ hàng">
+                                            <span class="div-user-control control-4" id="cartItemsCount"></span>
+                                            <span class="info">Giỏ hàng</span><span class="header-cart-count CartCount" id="count_Cart">0</span>
+                                        </a>
+                                    </li>
                                     <li class="dropdown" id="segment_user_do_login">
                                         <a class="info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                             <div class="div-user-control control-2"></div><span> Tài khoản </span>
