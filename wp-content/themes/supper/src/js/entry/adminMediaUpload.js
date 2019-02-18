@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
             title: 'Select Images', // The title of frame
             library: {}, // Library of images, like as post
             button: {
-                text: 'Select'
+                text: 'Select feature img'
             },
             multiple: false // Enable select multiple
         });

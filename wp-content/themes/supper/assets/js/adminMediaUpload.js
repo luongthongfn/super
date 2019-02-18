@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
       library: {},
       // Library of images, like as post
       button: {
-        text: 'Select'
+        text: 'Select feature img'
       },
       multiple: false // Enable select multiple
 

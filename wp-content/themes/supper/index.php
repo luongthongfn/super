@@ -65,7 +65,10 @@
                         </li>
                     </ul>
                 </div>
-                <script></script>
+                <hr>
+                <hr>
+
+                <?php echo  do_shortcode('[rev_slider alias="main"]') ?>
             </div>
         </div>
     </div>
