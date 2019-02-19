@@ -68,7 +68,24 @@
                 <hr>
                 <hr>
 
-                <?php echo  do_shortcode('[rev_slider alias="main"]') ?>
+                <?php
+                $slide = new WP_Query([
+                    'post_type' => 'owl_slider',
+                    'name'      => 'main-slider'
+                ]);
+
+
+                $slide_id = $slide->posts[0]->ID;
+                // echo '<pre>';
+                // print_r($slide->posts);
+                // echo '</pre>';
+                $slide = get_post_meta($slide_id, '_owl_slide', true);
+
+                echo '<pre>';
+                print_r($slide);
+                echo '</pre>';
+
+                ?>
             </div>
         </div>
     </div>

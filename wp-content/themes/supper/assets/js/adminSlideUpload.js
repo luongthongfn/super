@@ -6,7 +6,7 @@ $(function () {
     var i = 0;
     return function () {
       i++;
-      var template = "\n            <li id='item-".concat(i, "'>\n                <span class='delete'>&times;</span>\n                <input type='hidden' name='owl_slide[item][img]' id='img-").concat(i, "'>\n                <label class='pickfile'>\n                    <input class='pick_img' type='button' data-setto='img-").concat(i, "'>\n                </label>\n                <label>\n                    <span>Slide Desc</span>\n                    <input type='text' name='owl_slide[item][desc]'>\n                    </label>\n                <label>\n                    <span>Slide link</span>\n                    <input type='text' name='owl_slide[item][link]'>\n                </label>\n            </li>\n            ");
+      var template = "\n            <li id='item-".concat(i, "'>\n                <span class='delete'>&times;</span>\n                <input type='hidden' name='owl_slide[img][]' class='hidden_input_img'>\n                <label class='pickfile'>\n                    <input class='pick_img' type='button'>\n                </label>\n                <input type='hidden' name='owl_slide[thumb][]' class='hidden_input_thumb'>\n                <label class='pickthumb'>\n                    <input class='pick_thumb' type='button'>\n                </label>\n                <label>\n                    <span>Slide title</span>\n                    <input type='text' name='owl_slide[title][]'>\n                </label>\n                <label>\n                    <span>Slide Desc</span>\n                    <input type='text' name='owl_slide[desc][]'>\n                </label>\n                <label>\n                    <span>Slide link</span>\n                    <input type='text' name='owl_slide[link][]'>\n                </label>\n            </li>\n            ");
       $('.owl-list').append(template);
     };
   }();
@@ -17,7 +17,7 @@ $(function () {
   });
   $('.owl-list').on('click', '.pick_img', function (event) {
     var _this = $(this),
-        setto = $(this).data('setto');
+        setto = $(this).parents('li').find('.hidden_input_img');
 
     event.preventDefault();
 
@@ -39,7 +39,7 @@ $(function () {
      */
 
     file_frame.on('open', function () {
-      var prev_img_id = $("#".concat(setto)).val(),
+      var prev_img_id = setto.val(),
           prev_img_id = prev_img_id.split(','),
           selection = file_frame.state().get('selection');
       $.each(prev_img_id, function (index, el) {
@@ -60,7 +60,56 @@ $(function () {
 
       _this.parent().css('background-image', "url(".concat(imgs_url, ")"));
 
-      $("#".concat(setto)).val(attachment_ids.join(','));
+      setto.val(attachment_ids.join(','));
+    });
+    file_frame.open();
+  });
+  $('.owl-list').on('click', '.pick_thumb', function (event) {
+    var _this = $(this),
+        setto = $(this).parents('li').find('.hidden_input_thumb');
+
+    event.preventDefault();
+
+    if (file_frame) {
+      file_frame.open();
+      return;
+    }
+
+    var file_frame = wp.media.frames.file_frame = wp.media({
+      title: 'Select Images',
+      library: {},
+      button: {
+        text: 'Select slide thumb'
+      },
+      multiple: false
+    });
+    /*
+     * Select images if it is selected, after you click button "pick_images" again
+     */
+
+    file_frame.on('open', function () {
+      var prev_img_id = setto.val(),
+          prev_img_id = prev_img_id.split(','),
+          selection = file_frame.state().get('selection');
+      $.each(prev_img_id, function (index, el) {
+        var attachment = wp.media.attachment(el);
+        !!attachment ? attachment.fetch() : null;
+        selection.add(attachment ? [attachment] : []);
+      });
+    }); // Select images event
+
+    file_frame.on('select', function () {
+      var attachment = file_frame.state().get('selection').toJSON(),
+          imgs_url = '',
+          attachment_ids = [];
+      $.each(attachment, function (index, item) {
+        attachment_ids.push(item.id);
+        imgs_url = item.url;
+      });
+
+      _this.parent().css('background-image', "url(".concat(imgs_url, ")"));
+
+      setto.val(attachment_ids.join(','));
     });
     file_frame.open();
   });
