@@ -10,6 +10,12 @@
                         Danh mục sản phẩm
                     </h2>
                     <ul class="as-menu">
+                        <li>
+                            <a href="<?= home_url('sanpham') ?>">
+                                <img src="<?= THEME_URL ?>/assets/img/i-dm1.png" alt="">
+                                Tất cả sản phẩm
+                            </a>
+                        </li>
                         <?php
                         $terms = get_terms([
                             'taxonomy' => 'prod_cate',
@@ -18,18 +24,18 @@
                         ]);
                         ?>
                         <?php foreach($terms as $term): ?>
-                        <?php
-                            $term_link = get_term_link($term, 'prod_cate');
-                            $term_icon_id = get_term_meta($term->term_id, 'icon', true);
+                            <?php
+                                $term_link = get_term_link($term, 'prod_cate');
+                                $term_icon_id = get_term_meta($term->term_id, 'icon', true);
 
-                            $term_icon_url = wp_get_attachment_url($term_icon_id);
-                        ?>
-                        <li>
-                            <a href="<?php echo $term_link ?>">
-                                <img src="<?php echo $term_icon_url ?>" alt="">
-                                <?php echo $term->name ?>
-                            </a>
-                        </li>
+                                $term_icon_url = wp_get_attachment_url($term_icon_id);
+                            ?>
+                            <li>
+                                <a href="<?php echo $term_link ?>">
+                                    <img src="<?php echo $term_icon_url ?>" alt="">
+                                    <?php echo $term->name ?>
+                                </a>
+                            </li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
@@ -38,54 +44,36 @@
 
             <!-- slider -->
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p80">
+                <?php
+                    $slider = new WP_Query([
+                        'post_type' => 'owl_slider',
+                        'name'      => 'main-slider'
+                    ]);
+                    $slide_id = $slider->posts[0]->ID;
+                    $slide = get_post_meta($slide_id, '_owl_slide', true);
+                ?>
                 <div class="slider_main owl-carousel">
-                    <div class="item"><a href=""><img src="<?php echo THEME_URL ?>/assets/img/banner1.jpg"></a></div>
-                    <div class="item"><a href=""><img src="<?php echo THEME_URL ?>/assets/img/banner1.jpg"></a></div>
-                    <div class="item"><a href=""><img src="<?php echo THEME_URL ?>/assets/img/banner1.jpg"></a></div>
+                    <?php foreach($slide as $item): ?>
+                        <?php $img_url = isset($item['img']) ? wp_get_attachment_url($item['img']) : ''; ?>
+                        <div class="item"><a href=""><img src="<?= $img_url ?>"></a></div>
+                    <?php endforeach; ?>
                 </div>
                 <div class="dp-top-right hidden-sm hidden-xs">
                     <ul id="main-custom-dots">
-                        <li class="owl-dot"><img src="<?php echo THEME_URL ?>/assets/img/banner-thum1.jpg">
-                            <div class="txt"><a href="">
-                                    <div class="tit">Viên uống trắng da cao cấp</div>
-                                    <div class="desc">Sản xuất 100% từ thiên thiên</div>
-                                </a></div>
-                        </li>
-                        <li class="owl-dot"><img src="<?php echo THEME_URL ?>/assets/img/banner-thum2.jpg">
-                            <div class="txt"><a href="">
-                                    <div class="tit">Viên uống trắng da cao cấp</div>
-                                    <div class="desc">Sản xuất 100% từ thiên thiên</div>
-                                </a></div>
-                        </li>
-                        <li class="owl-dot"><img src="<?php echo THEME_URL ?>/assets/img/banner-thum3.jpg">
-                            <div class="txt"><a href="">
-                                    <div class="tit">Viên uống trắng da cao cấp</div>
-                                    <div class="desc">Sản xuất 100% từ thiên thiên</div>
-                                </a></div>
-                        </li>
+                        <?php foreach($slide as $item): ?>
+                            <?php $thumb_url = isset($item['thumb']) ? wp_get_attachment_url($item['thumb']) : ''; ?>
+                            <li class="owl-dot">
+                                <img src="<?= $thumb_url ?>">
+                                <div class="txt">
+                                    <a href="<?= $item['link'] ?>">
+                                        <div class="tit"><?= $item['title'] ?></div>
+                                        <div class="desc"><?= $item['desc'] ?></div>
+                                    </a>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
-                <hr>
-                <hr>
-
-                <?php
-                $slide = new WP_Query([
-                    'post_type' => 'owl_slider',
-                    'name'      => 'main-slider'
-                ]);
-
-
-                $slide_id = $slide->posts[0]->ID;
-                // echo '<pre>';
-                // print_r($slide->posts);
-                // echo '</pre>';
-                $slide = get_post_meta($slide_id, '_owl_slide', true);
-
-                echo '<pre>';
-                print_r($slide);
-                echo '</pre>';
-
-                ?>
             </div>
         </div>
     </div>
@@ -152,8 +140,10 @@
                     $term_feature = wp_get_attachment_url( $term_feature_id );
                     ?>
                     <li>
-                        <a href="<?= get_term_link( $child, 'prod_cate' ) ?>"><img src="<?=$term_feature ?>"><span>
-                                <?=$term->name?></span></a>
+                        <a href="<?= get_term_link( $child, 'prod_cate' ) ?>">
+                            <img src="<?=$term_feature ?>">
+                            <span> <?=$term->name?></span>
+                        </a>
                     </li>
                     <?php
                 endforeach;

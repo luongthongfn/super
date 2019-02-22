@@ -5,6 +5,11 @@
         position: relative;
         flex: 0 1 20%;
         text-align: center;
+        &:nth-child(5){
+            label.pickfile{
+                margin-right: 0;
+            }
+        }
         label{
             display: block;
         }
@@ -14,7 +19,7 @@
             padding: 10px;
             border: 3px dashed #ccc;
             margin-bottom: 15px;
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center ;
             margin-right: 10px;

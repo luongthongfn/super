@@ -56,59 +56,65 @@ function metabox_slider_content($post)
             $desc = isset($item['desc']) ? $item['desc'] : '';
             $link = isset($item['link']) ? $item['link'] : '';
             printf("
-                    <li id='item-$i'>
-                        <span class='delete'>&times;</span>
-                        <input type='hidden' name='owl_slide[img][]' class='hidden_input_img' value='$img_id'>
-                        <label class='pickfile' style='background-image: url($img_url)'>
-                            <input type='button' class='pick_img'>
-                        </label>
-                        <input type='hidden' name='owl_slide[thumb][]' class='hidden_input_thumb' value='$thumb_id'>
-                        <label class='pickthumb' style='background-image: url($thumb_url)'>
-                            <input type='button' class='pick_thumb'>
-                        </label>
-                        <label>
-                            <span>Slide title</span>
-                            <input type='text' name='owl_slide[title][]' value='$title'>
-                        </label>
-                        <label>
-                            <span>Slide Desc</span>
-                            <input type='text' name='owl_slide[desc][]' value='$desc'>
-                        </label>
-                        <label>
-                            <span>Slide link</span>
-                            <input type='text' name='owl_slide[link][]' value='$link'>
-                        </label>
-                    </li>
-                ");
+                <li id='item-$i'>
+                    <span class='delete'>&times;</span>
+                    <input type='hidden' name='owl_slide[img][]' class='hidden_input_img' value='$img_id'>
+                    <label class='pickfile' style='background-image: url($img_url)'>
+                        <input type='button' class='pick_img'>
+                    </label>
+                    <input type='hidden' name='owl_slide[thumb][]' class='hidden_input_thumb' value='$thumb_id'>
+                    <label class='pickthumb' style='background-image: url($thumb_url)'>
+                        <input type='button' class='pick_thumb'>
+                    </label>
+                    <label>
+                        <span>%s</span>
+                        <input type='text' name='owl_slide[title][]' value='$title'>
+                    </label>
+                    <label>
+                        <span>%s</span>
+                        <input type='text' name='owl_slide[desc][]' value='$desc'>
+                    </label>
+                    <label>
+                        <span>%s</span>
+                        <input type='text' name='owl_slide[link][]' value='$link'>
+                    </label>
+                </li>
+            ",
+            __('Slide title', 'super'),
+            __('Slide Desc', 'super'),
+            __('Slide Link', 'super'),'' );
 
             $i++;
         }
     } else {
         printf("
-                    <li id='item-$i'>
-                        <span class='delete'>&times;</span>
-                        <input type='hidden' name='owl_slide[img][]' class='hidden_input_img'>
-                        <label class='pickfile'>
-                            <input type='button' class='pick_img'>
-                        </label>
-                        <input type='hidden' name='owl_slide[thumb][]' class='hidden_input_thumb'>
-                        <label class='pickthumb'>
-                            <input type='button' class='pick_thumb'>
-                        </label>
-                        <label>
-                            <span>Slide title</span>
-                            <input type='text' name='owl_slide[title][]'>
-                        </label>
-                        <label>
-                            <span>Slide Desc</span>
-                            <input type='text' name='owl_slide[desc][]'>
-                        </label>
-                        <label>
-                            <span>Slide link</span>
-                            <input type='text' name='owl_slide[link][]'>
-                        </label>
-                    </li>
-                ");
+            <li id='item-$i'>
+                <span class='delete'>&times;</span>
+                <input type='hidden' name='owl_slide[img][]' class='hidden_input_img'>
+                <label class='pickfile'>
+                    <input type='button' class='pick_img'>
+                </label>
+                <input type='hidden' name='owl_slide[thumb][]' class='hidden_input_thumb'>
+                <label class='pickthumb'>
+                    <input type='button' class='pick_thumb'>
+                </label>
+                <label>
+                    <span>%s</span>
+                    <input type='text' name='owl_slide[title][]'>
+                </label>
+                <label>
+                    <span>%s</span>
+                    <input type='text' name='owl_slide[desc][]'>
+                </label>
+                <label>
+                    <span>%s</span>
+                    <input type='text' name='owl_slide[link][]'>
+                </label>
+            </li>
+        ",
+        __('Slide title', 'super'),
+        __('Slide Desc', 'super'),
+        __('Slide Link', 'super') );
     }
 
     echo "</ul>";

@@ -5,12 +5,16 @@ require('_CONSTANT.php');
 //     echo('glob__'.$filename);
 // }
 
+include('include-file/rewrite-url.php');
+
 include('include-file/add-setting.php');
 include('include-file/add-setting-class.php');
 
 include('include-file/theme-support.php');
 include('include-file/style-script-register.php');
 include('include-file/template-function.php');
+
+include('include-file/breadcrumbs.php');
 
 include('include-file/custom-post-type.php');
 include('include-file/custom-post-type-add-meta-box.php');

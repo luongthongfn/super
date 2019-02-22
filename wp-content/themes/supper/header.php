@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="teal">
-    <title>sp</title>
     <!-- <link rel="stylesheet" href="css/menu-2.css"> -->
     <?php wp_head() ?>
 </head>
@@ -22,7 +21,7 @@
                     <div class="icon-menu"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></div>
                 </button>
                 <div class="text-center" style="line-height: 60px">
-                    <a href="">
+                    <a href="<?= home_url() ?>">
                         <img class="img_logo_mb" src="<?php $custom_logo_id = get_theme_mod( 'custom_logo' ); $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); echo $image[0]; ?>"
                             alt="">
                     </a>
@@ -76,7 +75,7 @@
                     <div class="dp-flex-pc ai-center jc-space-between p0 w1">
                         <div class="col-lg-3 col-md-2 hidden-sm hidden-xs">
                             <div class="center logo_pc">
-                                <a href="">
+                                <a href="<?= home_url() ?>">
                                     <img src="<?php $custom_logo_id = get_theme_mod( 'custom_logo' ); $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); echo $image[0]; ?>"
                                         alt="">
                                 </a>

@@ -1,55 +1,63 @@
 @import "../import/variable.scss";
 @import "../import/_mixin.scss";
 @import "../import/_placeholder.scss";
+
 .aside {
-	border: 1px solid #eaeaea;
-	border-top: 0;
+    border: 1px solid #eaeaea;
+    border-top: 0;
 }
 
 .sc-txt {
-	padding: 15px 20px;
+    padding: 15px 20px;
 }
 
 .tit-aside {
-	font-family: brandontext_bold, sans-serif;
-	font-size: 16px;
-	font-weight: 700;
-	text-transform: uppercase;
-	padding: 11px 0 12px 28px;
-	margin: 0;
-	border-top: 1px solid #eaeaea;
-	border-bottom: 1px solid #eaeaea;
+    font-family: brandontext_bold, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 11px 0 12px 28px;
+    margin: 0;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .sc-danhmuc-cate {
-	.list-cate {
-		li {
-			font-size: 14px;
-			&:before {
-				font-family: Fontawesome;
-				content: "\f105";
-				display: inline-block;
-				width: 18px;
-				color: #ccc;
-			}
-			a {}
-		}
-	}
+    .list-cate {
+        li {
+            font-size: 14px;
+
+            &:before {
+                font-family: Fontawesome;
+                content: "\f105";
+                display: inline-block;
+                width: 18px;
+                color: #ccc;
+            }
+
+            a {}
+        }
+    }
 
 }
-.sc-sanpham-cate{
-	.cate-prod{
-		@include prod;
-		border: none;
-		@include prod-hver2(none);
-		background:#fff;
-		margin-bottom: 30px;
-	}
+
+.sc-sanpham-cate {
+
+    .cate-prod,
+    .prod {
+        @include prod;
+        border: none;
+        @include prod-hver2(none);
+        background: #fff;
+        margin-bottom: 30px;
+    }
 }
 
 .sc-spnb {
-	.prod-aside {
-		@include prod;
-		margin-bottom: 20px;
-	}
+
+    .prod-aside,
+    .prod {
+        @include prod;
+        margin-bottom: 20px;
+    }
 }

@@ -1,5 +1,5 @@
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('prod'); ?> >
+<div id="id-<?php the_ID(); ?>" <?php post_class('prod'); ?> >
     <div class="relative">
         <a class="reRenderImg relative" href="<?php the_permalink() ?>">
             <?php get_thumbnail('small') ?>
