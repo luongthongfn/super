@@ -45,8 +45,8 @@ function metabox_slider_content($post)
     wp_nonce_field('save_thongtin', 'thongtin_nonce');
 
     echo "<ul class='owl-list'>";
+    $i = 0;
     if ($slider) {
-        $i = 0;
         foreach ($slider as $item) {
             $img_id = isset($item['img']) ? $item['img'] : '';
             $img_url = isset($item['img']) ? wp_get_attachment_url($item['img']) : '';

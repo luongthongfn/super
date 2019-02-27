@@ -49,31 +49,37 @@
                         'post_type' => 'owl_slider',
                         'name'      => 'main-slider'
                     ]);
-                    $slide_id = $slider->posts[0]->ID;
-                    $slide = get_post_meta($slide_id, '_owl_slide', true);
                 ?>
-                <div class="slider_main owl-carousel">
-                    <?php foreach($slide as $item): ?>
-                        <?php $img_url = isset($item['img']) ? wp_get_attachment_url($item['img']) : ''; ?>
-                        <div class="item"><a href=""><img src="<?= $img_url ?>"></a></div>
-                    <?php endforeach; ?>
-                </div>
-                <div class="dp-top-right hidden-sm hidden-xs">
-                    <ul id="main-custom-dots">
+                <?php if(isset($slider->posts[0])) :?>
+                    <?php
+                        $slide_id = $slider->posts[0]->ID;
+                        $slide = get_post_meta($slide_id, '_owl_slide', true);
+                    ?>
+
+                    <div class="slider_main owl-carousel">
                         <?php foreach($slide as $item): ?>
-                            <?php $thumb_url = isset($item['thumb']) ? wp_get_attachment_url($item['thumb']) : ''; ?>
-                            <li class="owl-dot">
-                                <img src="<?= $thumb_url ?>">
-                                <div class="txt">
-                                    <a href="<?= $item['link'] ?>">
-                                        <div class="tit"><?= $item['title'] ?></div>
-                                        <div class="desc"><?= $item['desc'] ?></div>
-                                    </a>
-                                </div>
-                            </li>
+                            <?php $img_url = isset($item['img']) ? wp_get_attachment_url($item['img']) : ''; ?>
+                            <div class="item"><a href=""><img src="<?= $img_url ?>"></a></div>
                         <?php endforeach; ?>
-                    </ul>
-                </div>
+                    </div>
+
+                    <div class="dp-top-right hidden-sm hidden-xs">
+                        <ul id="main-custom-dots">
+                            <?php foreach($slide as $item): ?>
+                                <?php $thumb_url = isset($item['thumb']) ? wp_get_attachment_url($item['thumb']) : ''; ?>
+                                <li class="owl-dot">
+                                    <img src="<?= $thumb_url ?>">
+                                    <div class="txt">
+                                        <a href="<?= $item['link'] ?>">
+                                            <div class="tit"><?= $item['title'] ?></div>
+                                            <div class="desc"><?= $item['desc'] ?></div>
+                                        </a>
+                                    </div>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
