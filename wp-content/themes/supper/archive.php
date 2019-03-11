@@ -65,7 +65,7 @@
 
                     $tax_query =[];
                     $query_obj = get_queried_object();
-                    $query_var_name = $query_obj->name;
+                    isset($query_obj->slug) ? $query_var_name = $query_obj->slug : $query_var_name = $query_obj->name;
                     if (is_tax()) {
                         $tax_query = [
                             'relation'=> 'AND',
