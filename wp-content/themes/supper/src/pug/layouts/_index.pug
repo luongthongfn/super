@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="theme-color" content="teal")
+    title
+      | sp
+    link(rel="stylesheet" href="css/bootstrap.min.css")
+    link(rel="stylesheet" href="css/font-awesome.css")
+    link(rel="stylesheet" href="css/menu-2.css")
+    link(rel="stylesheet" type="text/css" href="css/owl.theme2.css")
+
+    link(rel="stylesheet" type="text/css" href="css/style.css")
+    //- script(type="text/javascript" src="js/jquery-3.1.1.min.js")
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+
+    script(type="text/javascript" src="js/bootstrap.min.js")
+    script(src="js/custom.js")
+  body
+    // begin header
+    .page-loader
+      .spin
+    script.
+      $(window).on('load', function () {
+        $('.spin').hide();
+        $('.page-loader').css({
+          'opacity': '0',
+          'visibility': 'hidden'
+        });
+      })
+    include ../modules/_header.pug
+    block content
+    include ../modules/_footer.pug

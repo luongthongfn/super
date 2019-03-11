@@ -1,0 +1,29 @@
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=vietnamese');
+@include roboto('400,700');
+@include font(brandontext_regular);
+@include font(brandontext_bold);
+// @include font(UTMHelvetIns);
+// @include font(UVNHongHaHepBold);
+// @include font(UTMAvoBold);
+// @include font(UTMAvo);
+body {
+    font-family: 'brandontext_regular', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    background: #f4f8fa;
+    // background: url(../img/body-bg.png);
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     color: #333;
+//     font-size: 1em;
+//     line-height: 1.4;
+//     margin-top: 0;
+
+    
+// }

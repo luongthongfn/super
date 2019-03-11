@@ -1,0 +1,170 @@
+@import "../import/variable.scss";
+@import "../import/_mixin.scss";
+@import "../import/_placeholder.scss";
+
+.sc-sanpham-cate {
+    .title-cate {
+        position: relative;
+        z-index: 1;
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;
+        margin: 0;
+        margin-bottom: 15px;
+
+        >a {
+            font-family: 'brandontext_bold', sans-serif;
+            text-transform: uppercase;
+            display: inline-block;
+            text-decoration: none;
+            padding: 5px 10px 10px 0;
+            border-bottom: 1px solid $c1;
+            margin-bottom: -1px;
+        }
+        label{
+            font-size: 14px;
+            color: #888;
+        }
+
+        .filter-view {
+            font-family: 'brandontext_regular', sans-serif;
+
+            label {
+                font-size: 14px;
+                font-weight: 700;
+                color: #888;
+                padding-right: 15px;
+            }
+
+            select {
+                font-size: 14px;
+                font-weight: normal;
+                padding: 5px 10px;
+                border: 1px solid #f3f3f3;
+            }
+
+            [class^='view-'] {
+                width: 30px;
+                height: 30px;
+                border: none;
+                float: right;
+                padding: 0;
+                margin: 0 2px;
+
+                &.active {
+                    background-color: $c1 !important;
+                    background-position: bottom center;
+                }
+            }
+
+            .view-grid {
+                background: #fdfdfd url('../img/grid-view-bg.png') top center no-repeat;
+            }
+
+            .view-list {
+                background: #fdfdfd url('../img/list-view-bg.png') top center no-repeat;
+            }
+        }
+
+        .browse-tags {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            z-index: 100 span {
+                display: inline-block;
+                line-height: 30px;
+            }
+
+            select {
+                height: 30px;
+                border: 1px solid #ccc;
+                outline: none;
+            }
+
+            label {
+                float: left;
+                display: block;
+                margin-right: 10px;
+                line-height: 30px
+            }
+
+            #sort-by span {
+                line-height: 20px
+            }
+        }
+
+        #sort-by {
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: inline;
+                font-size: 14px;
+                font-weight: normal;
+
+                li {
+                    background: #fff;
+                    margin: 0 auto;
+                    padding: 5px 10px;
+                    position: relative;
+                    width: 120px;
+                    float: left;
+                    color: #333;
+                    border: 1px solid #F3F3F3;
+
+                    &:hover {
+                        background-color: #fff;
+
+                        >ul {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+
+                    li {
+                        width: 120px;
+                        margin-top: 0;
+                        border-top: none;
+                        border-right: none;
+                        border-left: none;
+                        text-align: left
+                    }
+                }
+
+                ul {
+                    position: absolute;
+                    visibility: hidden;
+                    opacity: 0;
+                    left: -1px;
+                    top: 27px;
+                    background: #F8F8F8;
+                    z-index: 10000;
+                    border: 1px solid #F0F0F0;
+                    transition: all 0.2s ease-in-out 0s;
+                }
+            }
+        }
+
+
+    }
+    .col-md-4:nth-child(3n+1){
+        clear: both;
+    }
+    .prod-cate {
+        margin-bottom: 20px;
+
+        h3 {
+            font-size: 14px;
+            text-align: center;
+
+            a {
+                color: #333;
+
+                &:hover {
+                    color: $c1;
+                }
+            }
+        }
+    }
+}

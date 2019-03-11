@@ -1,0 +1,128 @@
+@import "../import/variable.scss";
+@import "../import/_mixin.scss";
+@import "../import/_placeholder.scss";
+#go_top {
+    display: inline-block;
+    z-index: 99999;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    text-align: center; // background: $c1;
+    background-size: 300% auto;
+    opacity: 0.7;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 25px;
+
+    color: $c1;
+    border: 2px solid $c1;
+}
+#fixed-cart{
+    display: inline-block;
+    z-index: 99999;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    text-align: center; // background: $c1;
+    background-size: 300% auto;
+    opacity: 0.7;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    background:$c2;
+    padding: 5px;
+    img{
+        width: 100%;
+    }
+   
+}
+
+
+
+
+/* ====================== */
+
+footer {
+    .fi-title {
+        font-size: 15px;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		width: 100%;
+		background: url('../img/dash-double-footer.png') bottom repeat-x;
+		text-transform: uppercase;
+    }
+    .map-area,
+    .fb-area {
+        >* {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+    }
+}
+
+.qts_footer_top {
+    background: #fff;
+    margin-top: 40px;
+    .ft-policy {
+        position: relative;
+        padding: 30px 0;
+        text-align: center;
+        .fa {
+            color: #00a651;
+            font-size: 35px;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+        h4,
+        p {
+            margin: 0;
+            text-align: left;
+        }
+        h4 {
+            color: $c1;
+            font-family: brandontext_bold, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
+.qts_footer_mid {
+    background: #E6E6E6;
+    padding: 30px 0px;
+    .footer-left{
+    	&:after{
+    		content: '';
+    		position: absolute;
+    		top: 20px;
+    		bottom: 20px;
+    		right: -5px;
+    		width: 1px;
+    		background: #fff;
+    	}
+    }
+    .fi-about-block {
+        .fi-content {
+            font-size: 14px;
+            color: #888;
+            text-align: justify;
+            margin-top: 15px;
+        }
+    }
+}
+.qts_footer_bot{
+    font-size: 14px;
+    color: #888;
+    padding: 40px 0 0;
+    .cpr{
+        font-size: 16px;
+    }
+}

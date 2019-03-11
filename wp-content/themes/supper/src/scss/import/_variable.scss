@@ -1,0 +1,48 @@
+// ****************************************************************************
+// *                                 variable                                 *
+// ****************************************************************************
+$c1                 : #00a651;
+$c2                 : #ed1b25;
+$c3                 : #0c6136;
+$c4                 : #f2780b;
+$tran               : transparent;
+$c-bder             : #e5e5e5;
+$link               : #3B55C5;
+$c-bs               : #337ab7;
+//-------------------------------------------------------------------misc-----------------------------------------------
+$text-hl            : #d63c3c;
+$c-gray             : #cfcfcf;
+$c-btn              : #1ba2fa;
+$c-btn2             : #055698;
+$c-lnk              : #0360af;
+$c-price            : #bc2626;
+//----------------------------------------------------------------------------pc menu------------------------------------
+$mn-a               : #fff; // menu link pc
+$nav-hver           : $c1; // menu link pc hover
+$mn-fs              : 14px; //font size menu link pc
+$fw                 : 400;
+$text-transform     : none;
+$a-pad-pc           : 10px 20px; //padding of menu-link
+$first-link         : x; //padding 1st menu-link
+$pc_drop            : $c1; //bg color of dropdown ul li when hover
+$pc_drop_C          : #fff;
+
+//--------------------------------------------------------------------------menu-smaller--------------------------------
+$mn-mb-bar          : #000;
+$a-pad-mb           : 10px 20px;
+$fist-link-smaller  : px;
+$a-mb-fs            : 14px; ////font size menu link mobile
+//-----------------------------------------------------------------------------menu mobile-
+$mn-toggle          : #fff; //button
+$line-color         : $c1;
+$nav-toggle-float   : right;
+$mn-ul              : darken($c1, 27);  // menu
+$mn-bder            : lighten($mn-ul, 27); // border
+$mb-font-size       : 32px;
+$mb-link-color      : $c1; // link mobile color
+$mb-link-hover-color: $c1; // link mobile on hover color
+$mn-drop            : $mn-bder; //---------------------------------------------- // menu background hover and sub menu
+$mn-sub-bder        : $mn-ul; //
+//-------------------------------------------------------------width column-
+
+$w_con              : 1100; //container width

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="teal">
+    <title>sp</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/menu-2.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme2.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+  </head>
+  <body>
+    <!-- begin header-->
+    <div class="page-loader">
+      <div class="spin"></div>
+    </div>
+    <script>
+      $(window).on('load', function () {
+        $('.spin').hide();
+        $('.page-loader').css({
+          'opacity': '0',
+          'visibility': 'hidden'
+        });
+      })
+    </script>
+    <header id="header">
+      <section class="qts_head_top">
+        <div class="menu_mb butt_mobile visible-xs visible-sm clearfix">
+          <button class="nav-toggle">
+            <div class="icon-menu"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></div>
+          </button>
+          <div class="text-center" style="line-height: 60px"><a href=""><img class="img_logo_mb" src="img/logo.png" alt=""></a><span class="flr">
+              <div class="control-box">
+                <ul class="ul-control-box">
+                  <li class="top-cart-block"><a class="open-cart-popup" href="/cart" title="Giỏ hàng"><span class="div-user-control control-4" id="cartItemsCount"></span><span class="header-cart-count CartCount" id="count_Cart_mobile">0</span></a></li>
+                  <li class="dropdown" id="segment_user_do_login"><a class="info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <div class="div-user-control control-2"></div></a>
+                    <ul class="dropdown-menu info-user" aria-labelledby="dLabel">
+                      <li class="info"><a class="login" href="/account/login"><i class="fa fa-sign-in" aria-hidden="true"></i>                                                Đăng nhập</a></li>
+                      <li class="info"><a href="/account/register"><i class="fa fa-registered" aria-hidden="true"></i>                                                Đăng ký</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div></span></div>
+        </div>
+        <!-- /menu_mb-->
+        <div class="clearfix clb-header visible-sm visible-xs"></div>
+        <div class="hd-top">
+          <div class="container">
+            <div class="hd-top-left">
+              <div class="part"><i class="fa fa-map-marker"></i> Số 288, Dương Đình Hội, P. Tăng Nhơn Phú B,
+                                            Quận 9 - TP Hồ Chí Minh
+              </div>
+              <div class="part"><i class="fa fa-envelope"></i> inspire.itdev@gmail.com</div>
+              <div class="part"><i class="fa fa-mobile"></i> 01662 465 188</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="qts_head_mid">
+        <div class="clb5"></div>
+        <div class="container">
+          <div class="row_pc dp-flex-pc ai-center jc-space-between">
+            <div class="dp-flex-pc ai-center jc-space-between p0">
+              <div class="col-lg-3 col-md-2 hidden-sm hidden-xs">
+                <div class="center logo_pc"><a href=""><img class="wa" src="img/logo.png"></a></div>
+              </div>
+              <div class="col-md-6">
+                <form class="box_search">
+                  <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                    <input class="form-control input_search" type="text" placeholder="Search"><span class="input-group-btn">
+                      <button class="btn btn-default butt_search" type="button">Tìm kiếm</button></span>
+                  </div>
+                </form>
+                <ul class="chir_autocomplete">
+                  <li class="title dib"><strong>Gợi ý từ khóa: </strong></li>
+                  <li><span>Thời trang nam, Thời trang nữ, Balo, Túi xách, Mè và bé...</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-4">
+                <div class="control-box">
+                  <ul class="ul-control-box">
+                    <li class="top-hotline"><a href="/apps/kiem-tra-don-hang" title="Hot line"><span class="div-user-control control-4"><img src="img/phone.png"></span><span class="info">Tra cứu đơn hàng</span></a></li>
+                    <li class="top-cart-block"><a class="open-cart-popup" href="/cart" title="Giỏ hàng"><span class="div-user-control control-4" id="cartItemsCount"></span><span class="info">Giỏ hàng</span><span class="header-cart-count CartCount" id="count_Cart">0</span></a></li>
+                    <li class="dropdown" id="segment_user_do_login"><a class="info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">
+                        <div class="div-user-control control-2"></div><span> Tài khoản </span></a>
+                      <ul class="dropdown-menu info-user" aria-labelledby="dLabel">
+                        <li class="info"><a class="login" href="/account/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập</a></li>
+                        <li class="info"><a href="/account/register"><i class="fa fa-registered" aria-hidden="true"></i>                                                    Đăng ký</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix hidden-lg hidden-md"></div>
+          </div>
+        </div>
+      </section>
+      <section class="qts_head_bot sc_header_menu sticky-header p0">
+        <div class="menu_bg dp-flex-pc jc-space-between ai-center">
+          <div class="container">
+            <div class="row_pc">
+              <div class="col-md-12">
+                <nav class="nav is-fixed" role="navigation">
+                  <div class="nav-container">
+                    <ul class="nav-menu menu clearfix">
+                      <li class="menu-item active"><a class="menu-link" href=""> Trang chủ </a></li>
+                      <li class="menu-item has-dropdown"><a class="menu-link" href="">Bộ sưu tập<span class="label_icon label-hot">hot</span></a>
+                        <ul class="nav-dropdown menu">
+                          <li class="menu-item has-dropdown"><a class="menu-link" href=""> link 1</a>
+                            <ul class="nav-dropdown menu">
+                              <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                              <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                              <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                              <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                            </ul>
+                          </li>
+                          <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                          <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                          <li class="menu-item"><a class="menu-link" href=""> link 1</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item"><a class="menu-link" href=""> Sản phẩm </a></li>
+                      <li class="menu-item"><a class="menu-link" href="">Tin tức<span class="label_icon label-new">new</span></a></li>
+                      <li class="menu-item"><a class="menu-link" href=""> Giới thiệu </a></li>
+                      <li class="menu-item"><a class="menu-link" href=""> Thời trang mới</a></li>
+                      <li class="menu-item"><a class="menu-link" href="">Best seller<span class="label_icon label-sale">sale</span></a></li>
+                      <li class="menu-item"><a class="menu-link" href=""> Liên hệ</a></li>
+                      <li class="menu-item"><a class="menu-link" href=""> Giới thiệu </a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- end-header-->
+    <article class="home-content">
+      <div class="container">
+        <ul class="crumbs list-inline">
+          <li><a href="">Trang chủ</a></li>
+          <li><a href="">Tất cả sản phẩm</a></li>
+        </ul>
+        <div class="row_pc">
+          <aside class="col-md-3 col-sm-4">
+            <div class="aside">
+              <section class="sc-danhmuc-cate">
+                <h2 class="tit-aside">danh mục sản phẩm</h2>
+                <div class="sc-txt">
+                  <ul class="list-cate">
+                    <li><a href="">Tất cả sản phẩm</a></li>
+                    <li><a href="">Thể thao</a></li>
+                    <li><a href="">Mỹ phẩm</a></li>
+                    <li><a href="">Thời trang</a></li>
+                    <li><a href="">Điện thoại & Ipad</a></li>
+                    <li><a href="">Mẹ và bé</a></li>
+                    <li><a href="">Phụ kiện công nghệ</a></li>
+                    <li><a href="">Laptop</a></li>
+                    <li><a href="">Trang sức</a></li>
+                    <li><a href="">Máy ảnh</a></li>
+                  </ul>
+                </div>
+              </section>
+              <section class="sc-spnb">
+                <h2 class="tit-aside">Sản phẩm nổi bật</h2>
+                <div class="sc-txt">
+                  <div class="prod-aside">
+                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                      <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product" href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                      <div class="dp-top-right">Giảm 92%</div>
+                    </div>
+                    <div class="txt">
+                      <h3><a href="">Balo nam nữ style dể thương SID49706</a></h3>
+                      <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                    </div>
+                  </div>
+                  <div class="prod-aside">
+                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                      <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product" href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                      <div class="dp-top-right">Giảm 92%</div>
+                    </div>
+                    <div class="txt">
+                      <h3><a href="">Balo nam nữ style dể thương SID49706</a></h3>
+                      <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </aside>
+          <main class="col-md-9 col-sm-8">
+            <!-- begin sanpham-cate-->
+            <section class="sc-sanpham-cate">
+              <h2 class="title-cate"><a href="">Tất cả sản phẩm</a>
+                <form class="flr filter-view">
+                  <label for="">Sắp xếp:</label>
+                  <select>
+                    <option>Thứ tự</option>
+                    <option>Mặc định</option>
+                    <option>Bán chạy nhất</option>
+                    <option>A → Z</option>
+                    <option>Z → A</option>
+                    <option>Giá tăng dần</option>
+                    <option>Giá giảm dần</option>
+                    <option>Hàng mới nhất</option>
+                    <option>Hàng cũ nhất</option>
+                  </select>
+                  <button class="view-list" title="view list"></button>
+                  <button class="view-grid active" title="view grid"></button>
+                </form>
+              </h2>
+              <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-6 clear-md-4 clear-xs-6">
+                  <div class="cate-prod">
+                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                      <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product" href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                      <div class="dp-top-right">Giảm 92%</div>
+                    </div>
+                    <div class="txt">
+                      <h3><a href="">Balo nam nữ style dể thương SID49706</a></h3>
+                      <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 clear-md-4 clear-xs-6">
+                  <div class="cate-prod">
+                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                      <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product" href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                      <div class="dp-top-right">Giảm 92%</div>
+                    </div>
+                    <div class="txt">
+                      <h3><a href="">Balo nam nữ style dể thương SID49706</a></h3>
+                      <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 clear-md-4 clear-xs-6">
+                  <div class="cate-prod">
+                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                      <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product" href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                      <div class="dp-top-right">Giảm 92%</div>
+                    </div>
+                    <div class="txt">
+                      <h3><a href="">Balo nam nữ style dể thương SID49706</a></h3>
+                      <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 clear-md-4 clear-xs-6">
+                  <div class="cate-prod">
+                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                      <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product" href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                      <div class="dp-top-right">Giảm 92%</div>
+                    </div>
+                    <div class="txt">
+                      <h3><a href="">Balo nam nữ style dể thương SID49706</a></h3>
+                      <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 clear-md-4 clear-xs-6">
+                  <div class="cate-prod">
+                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                      <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product" href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                      <div class="dp-top-right">Giảm 92%</div>
+                    </div>
+                    <div class="txt">
+                      <h3><a href="">Balo nam nữ style dể thương SID49706</a></h3>
+                      <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 clear-md-4 clear-xs-6">
+                  <div class="cate-prod">
+                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                      <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product" href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                      <div class="dp-top-right">Giảm 92%</div>
+                    </div>
+                    <div class="txt">
+                      <h3><a href="">Balo nam nữ style dể thương SID49706</a></h3>
+                      <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 clear-md-4 clear-xs-6">
+                  <div class="cate-prod">
+                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                      <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product" href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                      <div class="dp-top-right">Giảm 92%</div>
+                    </div>
+                    <div class="txt">
+                      <h3><a href="">Balo nam nữ style dể thương SID49706</a></h3>
+                      <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 clear-md-4 clear-xs-6">
+                  <div class="cate-prod">
+                    <div class="relative"><a class="reRenderImg relative" href=""><img src="img/prod1.jpg"></a>
+                      <div class="dp-mid-center"><a class="quick_views" href=""><img src="img/zoom_w.png" alt="Xem nhanh" title="Xem nhanh"></a><a class="view_product" href=""><img src="img/eye_w.png" alt="Xem chi tiết" title="Xem chi tiết"></a><a class="add-cart" href=""><img src="img/cart_w.png" alt="Thêm vào giỏ" title="Thêm vào giỏ"></a></div>
+                      <div class="dp-top-right">Giảm 92%</div>
+                    </div>
+                    <div class="txt">
+                      <h3><a href="">Balo nam nữ style dể thương SID49706</a></h3>
+                      <div class="price"><span class="current">25.500₫</span><span class="older">30.000₫</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- end sanpham-cate-->
+          </main>
+        </div>
+      </div>
+    </article>
+    <footer id="footer">
+      <section class="qts_footer_top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-6 item_policy">
+              <div class="ft-policy clearfix"><span class="name-icon pull-left fa fa-truck"></span>
+                <div class="description pull-left">
+                  <h4>MIỄN PHÍ VẬN CHUYỂN</h4>
+                  <p>Cho đơn hàng trên 500k</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 item_policy">
+              <div class="ft-policy clearfix"><span class="name-icon pull-left fa fa-money"></span>
+                <div class="description pull-left">
+                  <h4>CAM KẾT CHÍNH HÃNG</h4>
+                  <p>Đảm bảo chất lượng 100%</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 item_policy">
+              <div class="ft-policy clearfix"><span class="name-icon pull-left fa fa-smile-o"></span>
+                <div class="description pull-left">
+                  <h4>HỖ TRỢ TƯ VẤN</h4>
+                  <p>Thứ 2-Thứ 7 : 08g30 - 17g30</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 item_policy">
+              <div class="ft-policy clearfix"><span class="name-icon pull-left fa fa-phone"></span>
+                <div class="description pull-left">
+                  <h4>01662 465 188</h4>
+                  <p>Đặt hàng ngay</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="qts_footer_mid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12 footer-left">
+              <div class="fi-about-block grid__item footer-new">
+                <div class="fi-title1 insScroll"><a href=""><img class="insImageload wa" src="img/logo_ft.png" alt="" itemprop="logo"></a></div>
+                <div class="fi-content" style="text-align:justify;">
+                  Super Store là chuyên cung cấp các sản phẩm chính hãng với đầy đủ các loại sản phẩm từ
+                  thời trang cho đến đồ dùng gia đình, đồ dùng cá nhân, mẹ và bé, nội thất... Với các
+                  thương hiệu nổi tiếng được nhập khẩu từ nhiều nước trên thế giới.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-12 footer-right">
+              <div class="col-md-3 col-sm-6 col-xs-6 newfooter">
+                <div class="fi-title">Về chúng tôi</div>
+                <div class="fi-content">
+                  <ul class="grid__item one-whole">
+                    <li><a href="/"><span>Trang chủ</span></a></li>
+                    <li><a href="/san-pham-noi-bat"><span>Bộ sưu tập</span></a></li>
+                    <li><a href="/collections/all"><span>Sản phẩm</span></a></li>
+                    <li><a href="/tin-tuc"><span>Tin tức</span></a></li>
+                    <li><a href="/gioi-thieu"><span>Giới thiệu</span></a></li>
+                    <li><a href="/thoi-trang-ban-chay"><span>Thời trang mới</span></a></li>
+                    <li><a href="/deal-time"><span>Best Seller</span></a></li>
+                    <li><a href="/lien-he-voi-chung-toi"><span>Liên hệ</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-6 newfooter">
+                <div class="fi-title">Hướng dẫn</div>
+                <div class="fi-content">
+                  <ul class="grid__item one-whole">
+                    <li><a href="/"><span>Trang chủ</span></a></li>
+                    <li><a href="/san-pham-noi-bat"><span>Bộ sưu tập</span></a></li>
+                    <li><a href="/collections/all"><span>Sản phẩm</span></a></li>
+                    <li><a href="/tin-tuc"><span>Tin tức</span></a></li>
+                    <li><a href="/gioi-thieu"><span>Giới thiệu</span></a></li>
+                    <li><a href="/thoi-trang-ban-chay"><span>Thời trang mới</span></a></li>
+                    <li><a href="/deal-time"><span>Best Seller</span></a></li>
+                    <li><a href="/lien-he-voi-chung-toi"><span>Liên hệ</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-6 newfooter">
+                <div class="fi-title">Thông tin</div>
+                <div class="fi-content">
+                  <ul class="grid__item one-whole">
+                    <li><a href="/"><span>Trang chủ</span></a></li>
+                    <li><a href="/san-pham-noi-bat"><span>Bộ sưu tập</span></a></li>
+                    <li><a href="/collections/all"><span>Sản phẩm</span></a></li>
+                    <li><a href="/tin-tuc"><span>Tin tức</span></a></li>
+                    <li><a href="/gioi-thieu"><span>Giới thiệu</span></a></li>
+                    <li><a href="/thoi-trang-ban-chay"><span>Thời trang mới</span></a></li>
+                    <li><a href="/deal-time"><span>Best Seller</span></a></li>
+                    <li><a href="/lien-he-voi-chung-toi"><span>Liên hệ</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-6 newfooter">
+                <div class="fi-title">Chính sách</div>
+                <div class="fi-content">
+                  <ul class="grid__item one-whole">
+                    <li><a href="/"><span>Trang chủ</span></a></li>
+                    <li><a href="/san-pham-noi-bat"><span>Bộ sưu tập</span></a></li>
+                    <li><a href="/collections/all"><span>Sản phẩm</span></a></li>
+                    <li><a href="/tin-tuc"><span>Tin tức</span></a></li>
+                    <li><a href="/gioi-thieu"><span>Giới thiệu</span></a></li>
+                    <li><a href="/thoi-trang-ban-chay"><span>Thời trang mới</span></a></li>
+                    <li><a href="/deal-time"><span>Best Seller</span></a></li>
+                    <li><a href="/lien-he-voi-chung-toi"><span>Liên hệ</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="qts_footer_bot">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-sm-12 col-xs-12">
+              <div class="bot-ft clearfix insScroll">
+                <div class="col-md-4 logo-ft-1 hidden-xs hidden-sm"><a href="/" title="Bộ công thương"><img class="insImageload wa" data-load="true" src="img/dtb.png"></a></div>
+                <div class="col-md-8 copy">
+                  <p>Công ty TMDV Super store<br> Template bán hàng đẹp, nhiều tính năng, khả năng Responsive thân thiện với
+                                                        người dùng. Tương thích với mọi thiết bị di động.<br> Địa chỉ: Số 288, Dương Đình Hội, P. Tăng Nhơn Phú B, Quận 9 - TP Hồ Chí Minh<br> ĐT:<a href="tel:01662465188">01662 465 188</a><br> Email:<a href="mailto:inspire.itdev@gmail.com">inspire.itdev@gmail.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 hidden-xs hidden-sm ft_payment">
+              <div class="fi-title">Thanh toán</div>
+              <div class="fi-content insScroll"><img class="insImageload wa" data-load="true" src="img/payment.png" alt="Các phương thức thanh toán"></div>
+            </div>
+            <p class="col-sm-12 col-xs-12 cpr text-center">© Bản quyền thuộc về Inspired theme | Cung cấp bởi<a rel="nofollow" href="https://www.bizweb.vn/?utm_source=site-khach-hang&amp;utm_campaign=referral_bizweb&amp;utm_medium=footer&amp;utm_content=cung-cap-boi-bizweb" title="Bizweb" target="_blank">Bizweb</a>.</p>
+          </div>
+        </div>
+      </section>
+    </footer><a class="center" id="go_top" href="#top"><i class="fa fa-angle-up fa-lg"></i></a><a class="center" id="fixed-cart" href="#"><img src="img/icon_cart_mb.png"></a>
+    <!-- <a href="" class="chat-online"><img src="img/chat-online.png"></a>-->
+    <!-- ****************************************script ***********************************************-->
+    <!-- ****************************************script ***********************************************-->
+    <script type="text/javascript">
+      $(function () {
+        // fixed-hl
+        $('.fx-hl').click(function () {
+          // $(this).toggleClass('plus');
+          $('.fixed-hl').toggleClass('mini');
+        })
+      });
+      $("a[href='#top'] , .to-top, #go_top ").click(function () {
+        $("html, body").animate({
+          scrollTop: 0
+        }, "slow");
+        return false;
+      });
+      $(window).scroll(function () {
+        if ($(window).scrollTop() >= 200) {
+          $('#go_top').show();
+        } else {
+          $('#go_top').hide();
+        }
+      });
+    </script>
+    <script src="js/owl.carousel2.min.js"></script>
+  </body>
+</html>
