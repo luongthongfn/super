@@ -21,6 +21,7 @@ include('include-file/custom-post-type-add-meta-box.php');
 
 include('include-file/custom-taxonomy.php');
 include('include-file/custom-taxonomy-add-meta-box.php');
+include('include-file/tag-mostview.php');
 
 //plugin
 include('include-file/plugin-owlcarousel2.php');

@@ -205,10 +205,14 @@ function breadcrumbs($breadcrums_class = 'breadcrumb', $post_type_page = false)
             $term_id = get_query_var('tag_id');
             $taxonomy = 'post_tag';
             $args = 'include=' . $term_id;
-            $terms = get_terms($taxonomy, $args);
-            $get_term_id = $terms[0]->term_id;
-            $get_term_slug = $terms[0]->slug;
-            $get_term_name = $terms[0]->name;
+            // $terms = get_terms($taxonomy, $args);
+            // $get_term_id = $terms[0]->term_id;
+            // $get_term_slug = $terms[0]->slug;
+            // $get_term_name = $terms[0]->name;
+            $terms = get_term($term_id);
+            $get_term_id = $terms->term_id;
+            $get_term_slug = $terms->slug;
+            $get_term_name = $terms->name;
 
             // Display the tag name
             echo '<li class="' . $li_class . ' item-current item-tag-' . $get_term_id . ' item-tag-' . $get_term_slug . '"><strong class="bread-current bread-tag-' . $get_term_id . ' bread-tag-' . $get_term_slug . '">' . $get_term_name . '</strong></li>';

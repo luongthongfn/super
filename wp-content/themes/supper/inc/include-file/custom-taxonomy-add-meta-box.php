@@ -96,9 +96,10 @@ function save_taxonomy_custom_meta($term_id)
     if (isset($_POST['meta_data']) && wp_verify_nonce($_POST['nonce_metadata'], 'nonce_metadata_action')) {
 
         $cat_keys = array_keys($_POST['meta_data']);
-        echo '<pre>';
-        print_r($cat_keys);
-        echo '</pre>';
+        // echo '<pre>';
+        // print_r($cat_keys);
+        // echo '</pre>';
+        // die;
         foreach ( $cat_keys as $key ) {
             if ( isset($_POST['meta_data'][$key]) ) {
                 $term_meta[$key] = $_POST['meta_data'][$key];
