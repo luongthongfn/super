@@ -30,7 +30,7 @@
     "jquery": "^3.3.1",
     "jquery-validation": "^1.19.0",
     "owl.carousel2": "^2.2.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "through2": "^3.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
